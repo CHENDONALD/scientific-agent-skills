@@ -9,3 +9,8 @@ dependencies = [
     "firecrawl-py>=4.9.0",
     "python-dotenv>=1.0.0",
 ]
+
+[dependency-groups]
+dev = [
+    "skills-ref @ git+https://github.com/agentskills/agentskills.git#subdirectory=skills-ref",
+]
