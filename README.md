@@ -545,7 +545,7 @@ This repository contains **139 scientific and research skills** organized across
 #### 🎓 **Research Methodology & Planning** (12+ skills)
 - Ideation: Scientific Brainstorming, Hypothesis Generation
 - Critical analysis: Scientific Critical Thinking, Scholar Evaluation
-- Scenario analysis: What-If Oracle (multi-branch possibility exploration, risk analysis, strategic options)
+- Scenario analysis: What-If Oracle (4–6 branch possibility exploration, contingency planning, decision stress-testing)
 - Multi-perspective deliberation: Consciousness Council (diverse expert viewpoints, devil's advocate analysis)
 - Cognitive profiling: DHDNA Profiler (extract thinking patterns and cognitive signatures from any text)
 - Funding: Research Grants
