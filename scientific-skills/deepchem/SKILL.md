@@ -2,10 +2,10 @@
 name: deepchem
 description: Molecular ML with diverse featurizers and pre-built datasets. Use for property prediction (ADMET, toxicity) with traditional ML or GNNs when you want extensive featurization options and MoleculeNet benchmarks. Best for quick experiments with pre-trained models, diverse molecular representations. For graph-first PyTorch workflows use torchdrug; for benchmark datasets use pytdc.
 license: MIT license
-allowed-tools: [Read, Write, Edit, Bash]
+allowed-tools: Read Write Edit Bash
 compatibility: Requires Python 3.7–3.11 (PyPI 2.8.0 caps at <3.12). Install PyTorch, TensorFlow, or JAX before the matching deepchem extra. RDKit is a core dependency.
 metadata:
-  version: "1.0"
+  version: "1.1"
   skill-author: K-Dense Inc.
 ---
 
