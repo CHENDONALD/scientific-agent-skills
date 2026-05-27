@@ -14,5 +14,6 @@ temp/
 research/
 
 .agents/
+AGENTS.md
 
 skills-lock.json
