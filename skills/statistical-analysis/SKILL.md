@@ -142,7 +142,7 @@ All tests have Bayesian versions that provide:
 
 **ALWAYS check assumptions before interpreting test results.**
 
-Use the bundled `scripts/assumption_checks.py` module for automated checking. Run Python from the skill directory (`scientific-skills/statistical-analysis/`) or add `scripts/` to `sys.path`:
+Use the bundled `scripts/assumption_checks.py` module for automated checking. Run Python from the skill directory (`skills/statistical-analysis/`) or add `scripts/` to `sys.path`:
 
 ```python
 from assumption_checks import comprehensive_assumption_check

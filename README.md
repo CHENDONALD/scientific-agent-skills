@@ -1,7 +1,7 @@
 # Scientific Agent Skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-[![Version](https://img.shields.io/badge/Version-2.42.0-blue.svg)](pyproject.toml)
+[![Version](https://img.shields.io/badge/Version-2.43.0-blue.svg)](pyproject.toml)
 [![Skills](https://img.shields.io/badge/Skills-140-brightgreen.svg)](#-whats-included)
 [![Databases](https://img.shields.io/badge/Databases-100%2B-orange.svg)](#-whats-included)
 [![Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
@@ -520,7 +520,7 @@ This repository contains **140 scientific and research skills** organized across
 #### ⚖️ **Regulatory & Standards** (1 skill)
 - Medical device standards: ISO 13485 Certification
 
-> 📖 **For complete details on all skills**, see [docs/scientific-skills.md](docs/scientific-skills.md)
+> 📖 **For complete details on all skills**, see [docs/skills.md](docs/skills.md)
 
 > 💡 **Looking for practical examples?** Check out [docs/examples.md](docs/examples.md) for comprehensive workflow examples across all scientific domains.
 
@@ -624,6 +624,11 @@ This project builds on 50+ amazing open source projects. If you find value in th
 **Problem: Outdated examples**
 - Solution: Report the issue via GitHub Issues
 - Check the official package documentation for updated syntax
+
+**Problem: `gh skill install` or docs link to `scientific-skills/` fails (v2.43.0+)**
+- As of v2.43.0, skills live under `skills/` (not `scientific-skills/`) to match the Agent Skills layout expected by GitHub CLI
+- Update manual copy paths, bookmarks, and citations from `scientific-skills/<name>` to `skills/<name>`
+- Re-run `gh skill install K-Dense-AI/scientific-agent-skills` after pulling the latest release
 
 ---
 
@@ -731,7 +736,7 @@ When citing a specific skill, include the skill name, version from `metadata.ver
   author = {{K-Dense Inc.}},
   title = {Astropy Skill for Scientific Agent Skills},
   year = {2026},
-  url = {https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/scientific-skills/astropy},
+  url = {https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/astropy},
   note = {Version 1.0, part of Scientific Agent Skills}
 }
 ```
@@ -741,7 +746,7 @@ Plain text format:
 ```text
 Astropy skill for Scientific Agent Skills, version 1.0.
 K-Dense Inc. (2026).
-https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/scientific-skills/astropy
+https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/astropy
 ```
 
 We appreciate acknowledgment in publications, presentations, or projects that benefit from these skills.

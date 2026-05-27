@@ -11,10 +11,10 @@ Thanks for helping improve Scientific Agent Skills. This guide explains how to a
 
 ## Skill Location
 
-All repository skills live under `scientific-skills/`:
+All repository skills live under `skills/`:
 
 ```text
-scientific-skills/
+skills/
 └── skill-name/
     ├── SKILL.md
     ├── references/
@@ -116,10 +116,10 @@ Good skills are specific, practical, and easy for an agent to apply.
    git checkout -b add-skill-name
    ```
 
-2. Create a new directory under `scientific-skills/` whose name matches the skill name:
+2. Create a new directory under `skills/` whose name matches the skill name:
 
    ```text
-   scientific-skills/skill-name/
+   skills/skill-name/
    ```
 
 3. Add `SKILL.md` with valid frontmatter, including `metadata.version`.
@@ -146,7 +146,7 @@ Good skills are specific, practical, and easy for an agent to apply.
 Validate Agent Skills format with the reference validator:
 
 ```bash
-skills-ref validate ./scientific-skills/skill-name
+skills-ref validate ./skills/skill-name
 ```
 
 If `skills-ref` is not installed, follow the installation instructions from the [skills-ref reference library](https://github.com/agentskills/agentskills/tree/main/skills-ref).
@@ -155,7 +155,7 @@ Security-scan new or substantially changed skills:
 
 ```bash
 uv pip install cisco-ai-skill-scanner
-skill-scanner scan ./scientific-skills/skill-name --use-behavioral
+skill-scanner scan ./skills/skill-name --use-behavioral
 ```
 
 A clean scan reduces review noise but does not replace manual review.
