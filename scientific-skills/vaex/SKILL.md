@@ -4,7 +4,8 @@ description: Use this skill for processing and analyzing large tabular datasets 
 allowed-tools: Read Write Edit Bash Grep Glob
 license: MIT license
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 compatibility: Requires Python 3.10+ (3.12+ recommended with vaex 4.19.0). Install with uv pip install vaex. Optional s3fs/gcsfs/adlfs for cloud I/O.
 ---
 

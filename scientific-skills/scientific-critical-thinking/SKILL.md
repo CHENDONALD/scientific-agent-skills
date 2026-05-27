@@ -4,7 +4,8 @@ description: Evaluate scientific claims and evidence quality. Use for assessing 
 allowed-tools: Read Write Edit Bash
 license: MIT license
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # Scientific Critical Thinking

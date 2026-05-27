@@ -4,6 +4,7 @@ description: "Create, edit, analyze, or convert Excel spreadsheets (.xlsx, .xlsm
 allowed-tools: [Read, Write, Edit, Bash, Grep, Glob]
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
+  version: "1.0"
   skill-author: K-Dense Inc.
 compatibility: Requires Python 3.8+, LibreOffice (soffice on PATH), and gcc only when Unix sockets are restricted
 ---

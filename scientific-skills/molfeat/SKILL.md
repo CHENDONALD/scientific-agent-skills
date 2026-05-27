@@ -5,7 +5,8 @@ license: Apache-2.0 license
 allowed-tools: Read Write Edit Bash
 compatibility: Requires Python 3.9–3.10 (molfeat 0.11.0 does not support 3.11+). Requires datamol, PyTorch, and optional extras for GNN/transformer models.
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # Molfeat - Molecular Featurization Hub

@@ -5,7 +5,8 @@ license: Apache-2.0 license
 allowed-tools: [Read, Write, Edit, Bash]
 compatibility: Requires Python 3.9+ and datamol (installed with medchem). Optional Lilly demerit filter requires separate `lilly-medchem-rules` conda package.
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # Medchem

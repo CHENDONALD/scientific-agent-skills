@@ -5,7 +5,8 @@ allowed-tools: Read Write Edit Bash
 license: MIT License
 compatibility: Requires Python 3.10+ and pyzotero 1.13+. Web API access needs a Zotero API key. Optional CLI and MCP extras require Zotero 7 with local API access enabled.
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # Pyzotero

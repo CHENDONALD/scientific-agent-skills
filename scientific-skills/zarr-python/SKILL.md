@@ -5,7 +5,8 @@ allowed-tools: Read Write Edit Bash
 license: MIT license
 compatibility: Requires Python 3.12+ and zarr 3.x. Cloud I/O needs zarr[remote] plus s3fs or gcsfs. Legacy Zarr v2 workflows use zarr==2.* on older Python.
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # Zarr Python

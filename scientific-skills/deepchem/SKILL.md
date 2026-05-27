@@ -5,7 +5,8 @@ license: MIT license
 allowed-tools: [Read, Write, Edit, Bash]
 compatibility: Requires Python 3.7–3.11 (PyPI 2.8.0 caps at <3.12). Install PyTorch, TensorFlow, or JAX before the matching deepchem extra. RDKit is a core dependency.
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # DeepChem

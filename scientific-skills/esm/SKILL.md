@@ -3,7 +3,8 @@ name: esm
 description: Comprehensive toolkit for EvolutionaryScale protein language models including ESM3 (generative multimodal design across sequence, structure, and function) and ESM C (efficient embeddings). Use for protein sequence/structure/function tasks, inverse folding, embeddings, variant design, and ESMFold2 structure prediction via Biohub. Supports local open weights (Python 3.12, esm on PyPI) and cloud Forge/Biohub APIs with ESM_API_KEY authentication.
 license: MIT license
 metadata:
-    skill-author: K-Dense Inc.
+  version: "1.0"
+  skill-author: K-Dense Inc.
 ---
 
 # ESM: Evolutionary Scale Modeling

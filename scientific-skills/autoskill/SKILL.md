@@ -4,8 +4,9 @@ description: Observe the user's screen via screenpipe, detect repeated research 
 allowed-tools: Read Write Edit Bash
 license: MIT license
 metadata:
-    skill-author: K-Dense Inc.
-    requires: screenpipe
+  version: "1.0"
+  skill-author: K-Dense Inc.
+  requires: screenpipe
 ---
 
 # autoskill
