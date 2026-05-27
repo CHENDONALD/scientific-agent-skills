@@ -565,6 +565,8 @@ This repository contains **139 scientific and research skills** organized across
 
 We welcome contributions to expand and improve this scientific skills repository!
 
+For detailed instructions on adding or updating a skill, see [CONTRIBUTING.md](CONTRIBUTING.md). The guide covers repository structure, required `SKILL.md` frontmatter, Agent Skills specification requirements, versioning, validation, security scanning, and pull request expectations.
+
 ### Ways to Contribute
 
 ✨ **Add New Skills**
@@ -585,8 +587,8 @@ We welcome contributions to expand and improve this scientific skills repository
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-skill`)
-3. **Follow** the existing directory structure and documentation patterns
-4. **Ensure** all new skills include comprehensive `SKILL.md` files
+3. **Follow** [CONTRIBUTING.md](CONTRIBUTING.md) and the existing directory structure
+4. **Ensure** all new skills include valid `SKILL.md` files with required frontmatter and `metadata.version`
 5. **Test** your examples and workflows thoroughly
 6. **Commit** your changes (`git commit -m 'Add amazing skill'`)
 7. **Push** to your branch (`git push origin feature/amazing-skill`)
@@ -595,6 +597,8 @@ We welcome contributions to expand and improve this scientific skills repository
 ### Contribution Guidelines
 
 ✅ **Adhere to the [Agent Skills Specification](https://agentskills.io/specification)** — Every skill must follow the official spec (valid `SKILL.md` frontmatter, naming conventions, directory structure)  
+✅ Include a quoted `metadata.version` value in every `SKILL.md`  
+✅ Increment `metadata.version` when updating an existing skill  
 ✅ Maintain consistency with existing skill documentation format  
 ✅ Ensure all code examples are tested and functional  
 ✅ Follow scientific best practices in examples and workflows  
@@ -714,9 +718,18 @@ Need help? Here's how to get support:
 
 ## 📖 Citation
 
-If you use Scientific Agent Skills in your research or project, please cite it as:
+If you use Scientific Agent Skills in your research or project, please cite the overall collection and, when relevant, the individual skill or skills that materially supported your work.
 
-### BibTeX
+The collection citation helps others find the repository, understand the broader skill ecosystem used in your workflow, and credit the maintenance effort behind Scientific Agent Skills. Individual skill citations give more precise credit for the specific package, database, or workflow guidance your agent used.
+
+Recommended practice:
+- Always cite **Scientific Agent Skills** using one of the formats below.
+- Also cite each individual skill that directly contributed to your analysis, code, figures, reports, or research workflow.
+- If a skill wraps or documents an external package, database, or platform, cite that upstream project too when your field's norms require it.
+
+### Collection Citation
+
+#### BibTeX
 ```bibtex
 @software{scientific_agent_skills_2026,
   author = {{K-Dense Inc.}},
@@ -727,23 +740,45 @@ If you use Scientific Agent Skills in your research or project, please cite it a
 }
 ```
 
-### APA
+#### APA
 ```
 K-Dense Inc. (2026). Scientific Agent Skills: A comprehensive collection of scientific tools for AI agents [Computer software]. https://github.com/K-Dense-AI/scientific-agent-skills
 ```
 
-### MLA
+#### MLA
 ```
 K-Dense Inc. Scientific Agent Skills: A Comprehensive Collection of Scientific Tools for AI Agents. 2026, github.com/K-Dense-AI/scientific-agent-skills.
 ```
 
-### Plain Text
+#### Plain Text
 ```
 Scientific Agent Skills by K-Dense Inc. (2026)
 Available at: https://github.com/K-Dense-AI/scientific-agent-skills
 ```
 
-We appreciate acknowledgment in publications, presentations, or projects that benefit from these skills!
+### Individual Skill Citation
+
+When citing a specific skill, include the skill name, version from `metadata.version` in that skill's `SKILL.md`, and the direct skill URL. For example:
+
+```bibtex
+@software{scientific_agent_skills_astropy_2026,
+  author = {{K-Dense Inc.}},
+  title = {Astropy Skill for Scientific Agent Skills},
+  year = {2026},
+  url = {https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/scientific-skills/astropy},
+  note = {Version 1.0, part of Scientific Agent Skills}
+}
+```
+
+Plain text format:
+
+```text
+Astropy skill for Scientific Agent Skills, version 1.0.
+K-Dense Inc. (2026).
+https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/scientific-skills/astropy
+```
+
+We appreciate acknowledgment in publications, presentations, or projects that benefit from these skills.
 
 ---
 
