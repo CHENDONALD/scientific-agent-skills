@@ -8,12 +8,14 @@
 [![Skills](https://img.shields.io/badge/Skills-139-brightgreen.svg)](#-whats-included)
 [![Databases](https://img.shields.io/badge/Databases-100%2B-orange.svg)](#-whats-included)
 [![Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
-[![Works with](https://img.shields.io/badge/Works_with-Cursor_|_Claude_Code_|_Codex-blue.svg)](#-getting-started)
+[![Works with](https://img.shields.io/badge/Works_with-Cursor_|_Claude_Code_|_Codex_|_Google_Antigravity-blue.svg)](#-getting-started)
 [![X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
 [![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
 
-A comprehensive collection of **139 ready-to-use scientific and research skills** (covering cancer genomics, drug-target binding, molecular dynamics, RNA velocity, geospatial science, time series forecasting, scientific ML resource discovery via Hugging Science, 78+ scientific databases, and more) for any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard, created by [K-Dense](https://k-dense.ai). Works with **Cursor, Claude Code, Codex, and more**. Transform your AI agent into a research assistant capable of executing complex multi-step scientific workflows across biology, chemistry, medicine, and beyond.
+> **Stay up to date:** Follow K-Dense on [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), and [YouTube](https://www.youtube.com/@K-Dense-Inc) for new skills, release announcements, walkthroughs, research workflow demos, and examples you can use with your own AI agent.
+
+A comprehensive collection of **139 ready-to-use scientific and research skills** (covering cancer genomics, drug-target binding, molecular dynamics, RNA velocity, geospatial science, time series forecasting, scientific ML resource discovery via Hugging Science, 78+ scientific databases, and more) for any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard, created by [K-Dense](https://k-dense.ai). Works with **Cursor, Claude Code, Codex, Google Antigravity, and more**. Transform your AI agent into a research assistant capable of executing complex multi-step scientific workflows across biology, chemistry, medicine, and beyond.
 
 ---
 
@@ -117,7 +119,7 @@ Install Scientific Agent Skills with a single command:
 npx skills add K-Dense-AI/scientific-agent-skills
 ```
 
-This is the official standard approach for installing Agent Skills across **all platforms**, including **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Cursor**, and any other agent that supports the open [Agent Skills](https://agentskills.io/) standard.
+This is the official standard approach for installing Agent Skills across **all platforms**, including **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Google Antigravity**, **Cursor**, and any other agent that supports the open [Agent Skills](https://agentskills.io/) standard.
 
 ### Option 2: GitHub CLI (`gh skill`)
 
@@ -210,7 +212,7 @@ Scientific Agent Skills is powered by **50+ incredible open source projects** ma
 
 - **Python**: 3.11+ (3.12+ recommended for best compatibility)
 - **uv**: Python package manager (required for installing skill dependencies)
-- **Client**: Any agent that supports the [Agent Skills](https://agentskills.io/) standard (Cursor, Claude Code, Gemini CLI, Codex, etc.)
+- **Client**: Any agent that supports the [Agent Skills](https://agentskills.io/) standard (Cursor, Claude Code, Gemini CLI, Codex, Google Antigravity, etc.)
 - **System**: macOS, Linux, or Windows with WSL2
 - **Dependencies**: Automatically handled by individual skills (check `SKILL.md` files for specific requirements)
 
@@ -682,7 +684,7 @@ A: No. Each skill has its own license specified in the `license` metadata field 
 A: We regularly update skills to reflect the latest versions of packages and APIs. Major updates are announced in release notes.
 
 **Q: Can I use this with other AI models?**  
-A: The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible agent, including Cursor, Claude Code, and Codex.
+A: The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible agent, including Cursor, Claude Code, Codex, and Google Antigravity.
 
 ### Installation & Setup
 
@@ -712,6 +714,7 @@ Need help? Here's how to get support:
 - 📖 **Documentation**: Check the relevant `SKILL.md` and `references/` folders
 - 🐛 **Bug Reports**: [Open an issue](https://github.com/K-Dense-AI/scientific-agent-skills/issues)
 - 💡 **Feature Requests**: [Submit a feature request](https://github.com/K-Dense-AI/scientific-agent-skills/issues/new)
+- 📣 **Updates and demos**: Follow [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), and [YouTube](https://www.youtube.com/@K-Dense-Inc) to keep up with new skills, tutorials, and Scientific Agent Skills releases
 - 💼 **Enterprise Support**: Contact [K-Dense](https://k-dense.ai/) for commercial support
 
 ---
