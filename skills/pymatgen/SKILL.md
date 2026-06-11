@@ -2,7 +2,7 @@
 name: pymatgen
 description: Materials science toolkit. Crystal structures (CIF, POSCAR), phase diagrams, band structure, DOS, Materials Project integration, format conversion, for computational materials science.
 license: MIT license
-metadata: {"version": "1.0", "skill-author": "K-Dense Inc."}
+metadata: {"version": "1.0", "skill-author": "K-Dense Inc.", "openclaw": {"primaryEnv": "MP_API_KEY", "envVars": [{"name": "MP_API_KEY", "required": true, "description": "Materials Project API key (required for MP database queries)."}]}}
 ---
 
 # Pymatgen - Python Materials Genomics

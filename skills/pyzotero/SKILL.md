@@ -4,7 +4,7 @@ description: Interact with Zotero reference management libraries using the pyzot
 allowed-tools: Read Write Edit Bash
 license: MIT License
 compatibility: Requires Python 3.10+ and pyzotero 1.13+. Web API access needs a Zotero API key. Optional CLI and MCP extras require Zotero 7 with local API access enabled.
-metadata: {"version": "1.0", "skill-author": "K-Dense Inc."}
+metadata: {"version": "1.0", "skill-author": "K-Dense Inc.", "openclaw": {"primaryEnv": "ZOTERO_API_KEY", "envVars": [{"name": "ZOTERO_API_KEY", "required": true, "description": "Zotero API key."}, {"name": "ZOTERO_LIBRARY_ID", "required": true, "description": "Zotero library id."}, {"name": "ZOTERO_LIBRARY_TYPE", "required": false, "description": "Zotero library type: 'user' or 'group' (default 'user')."}]}}
 ---
 
 # Pyzotero

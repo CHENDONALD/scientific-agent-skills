@@ -3,7 +3,7 @@ name: markitdown
 description: Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX, XLSX, images (with OCR), audio (with transcription), HTML, CSV, JSON, XML, ZIP, YouTube URLs, EPubs and more.
 allowed-tools: Read Write Edit Bash
 license: MIT license
-metadata: {"version": "1.0", "skill-author": "K-Dense Inc."}
+metadata: {"version": "1.0", "skill-author": "K-Dense Inc.", "openclaw": {"primaryEnv": "OPENROUTER_API_KEY", "envVars": [{"name": "OPENROUTER_API_KEY", "required": false, "description": "OpenRouter API key for the skill's LLM-powered steps."}]}}
 ---
 
 # MarkItDown - File to Markdown Conversion
