@@ -76,8 +76,9 @@ Optional frontmatter fields from the specification may be used when relevant:
 
 - `license`: the license for the individual skill, if different or worth stating explicitly.
 - `compatibility`: environment requirements such as Python version, system packages, agent host, or network access.
-- `metadata`: additional metadata. Must be a single-line JSON object (see above). Common keys: `version` (required), `skill-author`, and an optional `openclaw` block (see below).
+- `metadata`: additional metadata. Must be a single-line JSON object (see above). Common keys: `version` (required), `skill-author`, an optional `openclaw` block, and an optional `hermes` block (see below).
 - `allowed-tools`: space-separated tool permissions for hosts that support this experimental field.
+- `required_environment_variables`: top-level Hermes credential declarations (see below). Other hosts ignore it.
 
 ### OpenClaw gating (`metadata.openclaw`)
 
@@ -93,6 +94,20 @@ Example (an API-key skill that stays available even without the key set, so it g
 
 ```yaml
 metadata: {"version": "1.0", "skill-author": "K-Dense Inc.", "openclaw": {"primaryEnv": "EXA_API_KEY", "envVars": [{"name": "EXA_API_KEY", "required": true, "description": "Exa search API key."}]}}
+```
+
+### Hermes compatibility (`required_environment_variables` and `metadata.hermes`)
+
+[Hermes](https://hermes-agent.nousresearch.com/docs) is Agent Skills-compatible, so every skill in this repository already loads and runs there with no changes. Two optional fields make credentialed skills first-class on Hermes:
+
+- **`required_environment_variables`** (top level): the credentials Hermes should prompt for. Write it as a single-line JSON array — `[{"name": "X_API_KEY", "prompt": "What it is", "required_for": "full functionality"}]`. This is the one Hermes-specific field that is *not* nested under `metadata`, because Hermes reads secrets at the top level. Writing it as single-line JSON keeps it valid YAML for every host and lets OpenClaw's line-based reader skip it cleanly; Claude Code, Cursor, and Codex ignore the unknown key. Mirror the same variables you declare in `metadata.openclaw.envVars`, using `required_for: "full functionality"` for required vars and `"optional features"` for optional ones.
+- **`metadata.hermes`** (nested, spec-safe like `openclaw`): optional classification and gating — `tags`, `category`, `requires_toolsets`, `fallback_for_toolsets`. A failed `requires_toolsets` gate *hides* the skill, so only gate on a tool the skill genuinely cannot run without; prefer leaving it unset so the skill stays available.
+
+Example (an API-key skill, declaring its credential for Hermes alongside the OpenClaw block):
+
+```yaml
+required_environment_variables: [{"name": "EXA_API_KEY", "prompt": "Exa search API key.", "required_for": "full functionality"}]
+metadata: {"version": "1.0", "skill-author": "Exa", "openclaw": {"primaryEnv": "EXA_API_KEY", "envVars": [{"name": "EXA_API_KEY", "required": true, "description": "Exa search API key."}]}}
 ```
 
 ## Versioning
@@ -182,6 +197,7 @@ Before submitting a pull request, confirm:
 - The skill directory name and `name` frontmatter match exactly.
 - `SKILL.md` has valid YAML frontmatter and Markdown body content.
 - `metadata` is a single-line JSON object (not a multi-line block), so it parses on OpenClaw as well as Claude Code, Cursor, and Codex.
+- If the skill needs credentials, `required_environment_variables` is present as a single-line JSON array and mirrors the variables in `metadata.openclaw.envVars`.
 - `metadata.version` exists and is quoted.
 - Existing skills have a version bump when changed.
 - The `description` clearly says what the skill does and when to use it.
