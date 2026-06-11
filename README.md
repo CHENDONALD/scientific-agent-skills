@@ -126,7 +126,7 @@ Install Scientific Agent Skills with a single command:
 npx skills add K-Dense-AI/scientific-agent-skills
 ```
 
-This is the official standard approach for installing Agent Skills across **all platforms**, including **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Google Antigravity**, **Cursor**, **OpenClaw**, **Hermes**, and any other agent that supports the open [Agent Skills](https://agentskills.io/) standard.
+This is the official standard approach for installing Agent Skills across **all platforms**, including **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Google Antigravity**, **Cursor**, **OpenClaw**, **NVIDIA NemoClaw**, **Hermes**, **Pi**, and any other agent that supports the open [Agent Skills](https://agentskills.io/) standard.
 
 ### Option 2: GitHub CLI (`gh skill`)
 
@@ -170,30 +170,24 @@ gh skill update
 gh skill update --all
 ```
 
-### Option 3: OpenClaw
+### Other Agent Skills hosts (OpenClaw, NemoClaw, Pi, Hermes, …)
 
-OpenClaw discovers any `SKILL.md` under its skill roots, so you can use these skills by cloning the repo into an OpenClaw workspace skills directory:
+You usually don't need anything host-specific. `npx skills add` (Option 1) installs into the shared `~/.agents/skills/` convention, and any compliant client that scans that directory — including **OpenClaw**, **NVIDIA NemoClaw** (an OpenClaw-based secure runtime), and **Pi** — discovers the skills automatically. Project-scoped installs land in `.agents/skills/` and work the same way. To install without the CLI, clone straight into either location:
 
 ```bash
-# Workspace-local (highest precedence) or personal install
-git clone https://github.com/K-Dense-AI/scientific-agent-skills.git <workspace>/skills/scientific-agent-skills
-# or: ~/.agents/skills/scientific-agent-skills  (personal)  •  ~/.openclaw/skills/...  (managed)
+git clone https://github.com/K-Dense-AI/scientific-agent-skills.git ~/.agents/skills/scientific-agent-skills   # user-level
+git clone https://github.com/K-Dense-AI/scientific-agent-skills.git .agents/skills/scientific-agent-skills      # project-level
 ```
 
-Every skill's `metadata` is written as single-line JSON so OpenClaw's frontmatter reader parses it, and credentialed skills declare their requirements under `metadata.openclaw` (env vars, binaries, API-key injection). Because 144 skills add up to a lot of standing context, consider installing a topical subset rather than the whole collection.
-
-### Option 4: Hermes
-
-[Hermes](https://hermes-agent.nousresearch.com/docs) is an [Agent Skills](https://agentskills.io/)-compatible host that discovers any `SKILL.md` under its skill roots. Add this repo as a tap, or clone it into a Hermes skills directory:
+**Hermes** is the one host that uses its own registry instead of the shared directory, so add the repo as a tap:
 
 ```bash
-# Tap the repository (recommended)
 hermes skills tap add K-Dense-AI/scientific-agent-skills
-# or clone directly into the Hermes skills root
-git clone https://github.com/K-Dense-AI/scientific-agent-skills.git ~/.hermes/skills/scientific-agent-skills
 ```
 
-Credentialed skills declare a top-level `required_environment_variables` field, so Hermes prompts for the relevant API keys and tokens on first use; classification metadata lives under `metadata.hermes`. As with any large collection, consider installing a topical subset rather than all 144 skills at once.
+These skills stay portable across all of them: `metadata` is single-line JSON (so OpenClaw's line-based reader parses it), credentialed skills declare a top-level `required_environment_variables` field (so Hermes prompts for keys), and unknown fields are ignored everywhere else. Because 144 skills add up to a lot of standing context, consider installing a topical subset rather than the whole collection.
+
+> **NemoClaw note:** NemoClaw runs agents inside NVIDIA OpenShell with default-deny outbound networking. Skills are discovered and loaded normally, but any skill that needs the network — package installs via `uv`, or API calls (Exa, Parallel, Benchling, NCBI, Materials Project, …) — only works once the operator pre-approves the relevant domains in the OpenShell TUI.
 
 **That's it!** Your AI agent will automatically discover the skills and use them when relevant to your scientific tasks. You can also invoke any skill manually by mentioning the skill name in your prompt.
 
@@ -685,7 +679,7 @@ A: No. Each skill has its own license specified in the `license` metadata field 
 A: We regularly update skills to reflect the latest versions of packages and APIs. Major updates are announced in release notes.
 
 **Q: Can I use this with other AI models?**  
-A: The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible agent, including Cursor, Claude Code, Codex, Google Antigravity, OpenClaw, and Hermes.
+A: The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible agent, including Cursor, Claude Code, Codex, Google Antigravity, OpenClaw, NVIDIA NemoClaw, Hermes, and Pi.
 
 ### Installation & Setup
 

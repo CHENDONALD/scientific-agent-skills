@@ -70,7 +70,7 @@ Follow the [Agent Skills specification](https://agentskills.io/specification) an
 - `description` should explain both what the skill does and when an agent should use it.
 - `metadata.version` is required in this repository, even though `metadata` is optional in the upstream spec.
 - Version values must be quoted numeric strings, such as `"1.0"` or `"1.1"`.
-- **Write `metadata` as a single-line JSON object** (flow style), for example `metadata: {"version": "1.0", "skill-author": "K-Dense Inc."}`. This is valid YAML — so it parses identically in Claude Code, Cursor, Codex, and any Agent Skills-compliant host — and it is the only form OpenClaw's line-based frontmatter reader can parse (a multi-line block `metadata:` is silently dropped there). Do not use a nested `metadata:` block.
+- **Write `metadata` as a single-line JSON object** (flow style), for example `metadata: {"version": "1.0", "skill-author": "K-Dense Inc."}`. This is valid YAML — so it parses identically in Claude Code, Cursor, Codex, Hermes, Pi, and any Agent Skills-compliant host — and it is the only form OpenClaw's line-based frontmatter reader can parse (a multi-line block `metadata:` is silently dropped there). Do not use a nested `metadata:` block.
 
 Optional frontmatter fields from the specification may be used when relevant:
 
@@ -196,7 +196,7 @@ Before submitting a pull request, confirm:
 
 - The skill directory name and `name` frontmatter match exactly.
 - `SKILL.md` has valid YAML frontmatter and Markdown body content.
-- `metadata` is a single-line JSON object (not a multi-line block), so it parses on OpenClaw as well as Claude Code, Cursor, and Codex.
+- `metadata` is a single-line JSON object (not a multi-line block), so it parses on OpenClaw as well as Claude Code, Cursor, Codex, Hermes, and Pi.
 - If the skill needs credentials, `required_environment_variables` is present as a single-line JSON array and mirrors the variables in `metadata.openclaw.envVars`.
 - `metadata.version` exists and is quoted.
 - Existing skills have a version bump when changed.
