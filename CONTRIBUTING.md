@@ -40,8 +40,7 @@ Use this minimum template:
 ---
 name: skill-name
 description: Clear description of what the skill does and when an agent should use it.
-metadata:
-  version: "1.0"
+metadata: {"version": "1.0", "skill-author": "Your Name"}
 ---
 
 # Skill Title
@@ -71,21 +70,37 @@ Follow the [Agent Skills specification](https://agentskills.io/specification) an
 - `description` should explain both what the skill does and when an agent should use it.
 - `metadata.version` is required in this repository, even though `metadata` is optional in the upstream spec.
 - Version values must be quoted numeric strings, such as `"1.0"` or `"1.1"`.
+- **Write `metadata` as a single-line JSON object** (flow style), for example `metadata: {"version": "1.0", "skill-author": "K-Dense Inc."}`. This is valid YAML — so it parses identically in Claude Code, Cursor, Codex, and any Agent Skills-compliant host — and it is the only form OpenClaw's line-based frontmatter reader can parse (a multi-line block `metadata:` is silently dropped there). Do not use a nested `metadata:` block.
 
 Optional frontmatter fields from the specification may be used when relevant:
 
 - `license`: the license for the individual skill, if different or worth stating explicitly.
 - `compatibility`: environment requirements such as Python version, system packages, agent host, or network access.
-- `metadata`: additional string key-value metadata.
+- `metadata`: additional metadata. Must be a single-line JSON object (see above). Common keys: `version` (required), `skill-author`, and an optional `openclaw` block (see below).
 - `allowed-tools`: space-separated tool permissions for hosts that support this experimental field.
+
+### OpenClaw gating (`metadata.openclaw`)
+
+OpenClaw reads an optional `openclaw` object nested inside `metadata` for dependency gating, credential injection, and display. Because it lives under `metadata`, the Agent Skills spec permits it and other hosts ignore it. It is only needed for skills with external requirements (credentials, daemons, specific binaries) — most skills omit it entirely. Supported keys:
+
+- `requires`: hard eligibility gates — `{"bins": [...]}` (all must be on `PATH`), `{"anyBins": [...]}` (at least one), `{"env": [...]}` (vars that must be set), `{"config": [...]}`. A failed gate hides the skill from the agent, so only gate on things the skill genuinely cannot run without.
+- `primaryEnv`: the main credential variable; OpenClaw injects it from its config (`skills.entries.<name>.apiKey`).
+- `envVars`: descriptive (non-gating) declarations — `[{"name": "X_API_KEY", "required": true, "description": "..."}]`. Declare every env var your scripts reference so ClawHub's security analysis does not flag a metadata mismatch.
+- `os`: platform filter, e.g. `["darwin", "linux"]`.
+- `emoji`, `homepage`: display only.
+
+Example (an API-key skill that stays available even without the key set, so it gates nothing and only declares the credential):
+
+```yaml
+metadata: {"version": "1.0", "skill-author": "K-Dense Inc.", "openclaw": {"primaryEnv": "EXA_API_KEY", "envVars": [{"name": "EXA_API_KEY", "required": true, "description": "Exa search API key."}]}}
+```
 
 ## Versioning
 
-Every `SKILL.md` must include:
+Every `SKILL.md` must include a quoted `version` inside the single-line `metadata` object:
 
 ```yaml
-metadata:
-  version: "1.0"
+metadata: {"version": "1.0"}
 ```
 
 For a new skill, start at `"1.0"`.
@@ -166,6 +181,7 @@ Before submitting a pull request, confirm:
 
 - The skill directory name and `name` frontmatter match exactly.
 - `SKILL.md` has valid YAML frontmatter and Markdown body content.
+- `metadata` is a single-line JSON object (not a multi-line block), so it parses on OpenClaw as well as Claude Code, Cursor, and Codex.
 - `metadata.version` exists and is quoted.
 - Existing skills have a version bump when changed.
 - The `description` clearly says what the skill does and when to use it.

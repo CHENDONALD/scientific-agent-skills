@@ -4,9 +4,7 @@ description: 'Look up current research information using parallel-cli search (pr
 allowed-tools: Read Write Edit Bash
 license: MIT license
 compatibility: parallel-cli required (primary); PARALLEL_API_KEY and OPENROUTER_API_KEY optional for deep/academic backends
-metadata:
-  version: "1.0"
-  skill-author: K-Dense Inc.
+metadata: {"version": "1.0", "skill-author": "K-Dense Inc.", "openclaw": {"primaryEnv": "PARALLEL_API_KEY", "envVars": [{"name": "PARALLEL_API_KEY", "required": false, "description": "Parallel web search API key."}, {"name": "OPENROUTER_API_KEY", "required": false, "description": "OpenRouter API key (fallback model access)."}]}}
 ---
 
 # Research Information Lookup

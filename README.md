@@ -126,7 +126,7 @@ Install Scientific Agent Skills with a single command:
 npx skills add K-Dense-AI/scientific-agent-skills
 ```
 
-This is the official standard approach for installing Agent Skills across **all platforms**, including **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Google Antigravity**, **Cursor**, and any other agent that supports the open [Agent Skills](https://agentskills.io/) standard.
+This is the official standard approach for installing Agent Skills across **all platforms**, including **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Google Antigravity**, **Cursor**, **OpenClaw**, and any other agent that supports the open [Agent Skills](https://agentskills.io/) standard.
 
 ### Option 2: GitHub CLI (`gh skill`)
 
@@ -169,6 +169,18 @@ gh skill update
 # Update all installed skills
 gh skill update --all
 ```
+
+### Option 3: OpenClaw
+
+OpenClaw discovers any `SKILL.md` under its skill roots, so you can use these skills by cloning the repo into an OpenClaw workspace skills directory:
+
+```bash
+# Workspace-local (highest precedence) or personal install
+git clone https://github.com/K-Dense-AI/scientific-agent-skills.git <workspace>/skills/scientific-agent-skills
+# or: ~/.agents/skills/scientific-agent-skills  (personal)  •  ~/.openclaw/skills/...  (managed)
+```
+
+Every skill's `metadata` is written as single-line JSON so OpenClaw's frontmatter reader parses it, and credentialed skills declare their requirements under `metadata.openclaw` (env vars, binaries, API-key injection). Because 144 skills add up to a lot of standing context, consider installing a topical subset rather than the whole collection.
 
 **That's it!** Your AI agent will automatically discover the skills and use them when relevant to your scientific tasks. You can also invoke any skill manually by mentioning the skill name in your prompt.
 
@@ -660,7 +672,7 @@ A: No. Each skill has its own license specified in the `license` metadata field 
 A: We regularly update skills to reflect the latest versions of packages and APIs. Major updates are announced in release notes.
 
 **Q: Can I use this with other AI models?**  
-A: The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible agent, including Cursor, Claude Code, Codex, and Google Antigravity.
+A: The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible agent, including Cursor, Claude Code, Codex, Google Antigravity, and OpenClaw.
 
 ### Installation & Setup
 
