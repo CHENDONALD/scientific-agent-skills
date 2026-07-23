@@ -1,11 +1,24 @@
 # Jobs, Analyses, and Execution
 
+## Quick Navigation
+
+- [Concepts and preflight](#concepts)
+- [Launch apps/applets](#launch-an-app-or-applet)
+- [Launch workflows](#launch-a-workflow)
+- [Lifecycle and monitoring](#lifecycle)
+- [Safe waits and outputs](#wait-safely-with-dxpy)
+- [Subjobs and reuse](#scattergather-with-subjobs)
+- [Instances and restarts](#instance-selection)
+- [Cost controls](#cost-controls)
+- [Failure triage](#failure-triage)
+- [Rerun and termination](#rerun)
+
 ## Concepts
 
 - **Job** (`job-...`): execution of one app or applet entry point.
 - **Analysis** (`analysis-...`): execution of a workflow and its stages.
 - **Origin execution**: user-initiated root of an execution tree.
-- **Master job**: app/appet run with its own temporary workspace.
+- **Master job**: app/applet run with its own temporary workspace.
 - **Subjob**: another entry point created with `/job/new`; normally shares its
   parent job's workspace.
 - **Job-based object reference (JBOR)**: dependency on a field of another
@@ -189,29 +202,35 @@ from dxpy.exceptions import DXError, DXJobFailureError
 
 try:
     job.wait_on_done(interval=10, timeout=6 * 60 * 60)
-except DXJobFailureError:
-    failure = job.describe(
+except DXJobFailureError as error:
+    status = job.describe(
         fields={
             "state": True,
             "failureReason": True,
             "failureMessage": True,
         }
     )
-    print(
-        failure.get("failureReason"),
-        failure.get("failureMessage"),
-    )
-    raise
+    state = status.get("state")
+    if state not in {"failed", "terminated"}:
+        raise TimeoutError(
+            f"local wait ended while remote job state is {state!r}"
+        ) from error
+    reason = status.get("failureReason") or "Terminated"
+    message = status.get("failureMessage") or str(error)
+    raise RuntimeError(f"{reason}: {message}") from error
 except DXError:
-    # Timeout or SDK/API failure; execution may still be running.
+    # SDK/API failure while polling; re-describe before deciding what to do.
     raise
 ```
 
-A local wait timeout does not terminate the remote execution. Re-describe it
-before deciding whether to continue waiting or request termination.
+Despite its docstring, dxpy 0.410.0 raises `DXJobFailureError` for remote
+failure, termination, **and local wait timeout**. Classify the exception by
+re-describing the remote state. A local timeout does not terminate the remote
+execution.
 
-`DXAnalysis.wait_on_done()` follows the same pattern and raises
-`DXJobFailureError` when a stage fails.
+`DXAnalysis.wait_on_done()` follows the same pattern. Treat `failed`,
+`partially_failed`, and `terminated` as remote terminal outcomes; otherwise the
+exception may be a local wait timeout while the analysis continues.
 
 ## Outputs
 
@@ -453,10 +472,11 @@ Confirm exact ID and affected execution tree:
 
 ```bash
 dx terminate "job-xxxx"
+dx terminate "analysis-xxxx"
 ```
 
-Terminate an analysis using the appropriate analysis operation/UI after
-confirming which stages and descendants are still active.
+`dx terminate` accepts both job and analysis IDs. For an analysis, confirm
+which stages and descendants remain active before terminating the tree.
 
 After termination, verify final states and identify incomplete outputs or open
 files that require cleanup.

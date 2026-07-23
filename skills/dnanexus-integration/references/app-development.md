@@ -1,5 +1,15 @@
 # App and Applet Development
 
+## Quick Navigation
+
+- [Model and source layout](#model)
+- [Python and Bash entry points](#python-entry-point)
+- [Execution environment](#execution-environment)
+- [Local testing](#separate-pure-logic-from-platform-io)
+- [Build and platform tests](#build)
+- [Subjobs, reuse, and errors](#subjobs-and-parallelism)
+- [Publish checklist](#publish-checklist)
+
 ## Model
 
 - **Applet**: immutable executable data object in one project; best for
@@ -8,7 +18,7 @@
   across projects/regions; best for maintained reusable products.
 - **Job**: execution of an app or applet.
 - **Entry point**: named function within an executable. `main` is used for a
-  normal app/appet run; other entry points can be launched as subjobs.
+  normal app/applet run; other entry points can be launched as subjobs.
 
 Develop as an applet, test in a non-production project, then create and publish
 an app only after reviewing code, permissions, dependencies, and regions.
@@ -201,11 +211,12 @@ Test `build_command()` locally without credentials.
 
 ## Build
 
-Validate offline:
+Validate offline from this skill's root (or resolve `scripts/` relative to the
+loaded skill directory):
 
 ```bash
-uv run python "skills/dnanexus-integration/scripts/validate_dxapp.py" \
-  "my-app/dxapp.json" --kind applet --strict
+uv run python "scripts/validate_dxapp.py" \
+  "/path/to/my-app/dxapp.json" --kind applet --strict
 ```
 
 Build an applet:

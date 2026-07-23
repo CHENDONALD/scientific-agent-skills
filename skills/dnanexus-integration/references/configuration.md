@@ -1,5 +1,17 @@
 # Current `dxapp.json` Configuration
 
+## Quick Navigation
+
+- [Manifest purpose](#what-dxappjson-controls)
+- [Applets versus apps](#applets-versus-apps)
+- [Input and output specifications](#input-and-output-specifications)
+- [`runSpec`](#runspec)
+- [Regional resources](#regional-resources)
+- [Retry and timeout policy](#retry-and-timeout-policy)
+- [Dependencies](#dependencies)
+- [Access requirements](#access-requirements)
+- [Validation checklist](#validation-checklist)
+
 ## What `dxapp.json` Controls
 
 `dxapp.json` is the source manifest consumed by `dx build` and
@@ -128,10 +140,10 @@ project. Do not copy a static instance list from old documentation.
 }
 ```
 
-Run the bundled offline check before building:
+Run the bundled offline check from this skill's root before building:
 
 ```bash
-uv run python "skills/dnanexus-integration/scripts/validate_dxapp.py" \
+uv run python "scripts/validate_dxapp.py" \
   "path/to/dxapp.json" --kind app --strict
 ```
 

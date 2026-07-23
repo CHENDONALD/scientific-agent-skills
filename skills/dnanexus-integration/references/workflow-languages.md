@@ -15,7 +15,7 @@ JSON, and generated executable IDs together as provenance.
 
 ## Native Workflows
 
-Native workflows connect app/appet stages. Build from a `dxworkflow.json`:
+Native workflows connect app/applet stages. Build from a `dxworkflow.json`:
 
 ```bash
 dx build --workflow "path/to/workflow-source" \
@@ -156,7 +156,7 @@ without conformance tests.
 
 ## Nextflow
 
-Creating a DNAnexus app/appet from Nextflow source requires a DNAnexus license.
+Creating a DNAnexus app/applet from Nextflow source requires a DNAnexus license.
 Current dx-toolkit supports Nextflow engine versions `25.10` and `24.10`;
 `25.10` is the current default and `24.10` is retained only as an unmaintained
 compatibility option.

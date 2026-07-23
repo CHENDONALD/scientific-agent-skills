@@ -1,5 +1,19 @@
 # Data Operations
 
+## Quick Navigation
+
+- [Safety and lifecycle](#safety-model)
+- [Transfer tool selection](#transfer-tool-selection)
+- [Small transfers](#small-transfers-with-dx)
+- [Upload Agent](#upload-agent)
+- [Download Agent](#download-agent)
+- [Python transfers](#python-upload-and-download)
+- [Search and metadata](#search)
+- [Records and folders](#records)
+- [Cloning and archival](#cloning)
+- [Deletion](#deletion)
+- [Batch checklist](#batch-operation-checklist)
+
 ## Safety Model
 
 DNAnexus data objects live in projects or other data containers. Before a
@@ -112,11 +126,8 @@ ua \
 ```
 
 Do not run `ua --env` in captured output because it displays the active token.
-`DX_API_TOKEN` and `DX_SECURITY_CONTEXT` are both secrets.
-
-Download Agent checks `DX_API_TOKEN` and otherwise falls back to the saved
-dx-toolkit configuration. `dx`, `dxpy`, and normal toolkit sessions use
-`DX_SECURITY_CONTEXT`; do not assume one variable name works for every client.
+Treat any Upload Agent `--auth-token` value and the toolkit
+`DX_SECURITY_CONTEXT` as secrets.
 
 Use `--do-not-resume` only when creating a deliberate second copy. Otherwise
 let the agent resume interrupted uploads.
@@ -126,6 +137,10 @@ let the agent resume interrupted uploads.
 Download Agent consumes a BZIP2-compressed JSON manifest. Use the manifest
 creation utility from the official `dnanexus/dxda` release and review its
 resolved file set before starting egress.
+
+Download Agent checks the secret `DX_API_TOKEN` and otherwise falls back to
+`~/.dnanexus_config/environment.json`. This is a Download Agent-specific
+variable; do not assume it configures Upload Agent, `dx`, or `dxpy`.
 
 ```bash
 dx-download-agent download "manifest.json.bz2"

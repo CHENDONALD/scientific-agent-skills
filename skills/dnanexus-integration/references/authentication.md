@@ -50,6 +50,19 @@ Preferred automation:
 6. Verify with `dx whoami`; do not use `dx env`.
 7. Remove the secret from the process environment when the operation ends.
 
+`DX_SECURITY_CONTEXT` must contain JSON text, not a bare UI token. Its secret
+value has this shape:
+
+```json
+{
+  "auth_token_type": "Bearer",
+  "auth_token": "<secret-token>"
+}
+```
+
+Have the secret manager inject the complete serialized object. Do not build or
+echo it in a traced shell command.
+
 Standard user API tokens inherit the creating user's project access; they are
 not independently project-scoped. Minimize the dedicated identity's project
 memberships and access levels before issuing its token. If an organization

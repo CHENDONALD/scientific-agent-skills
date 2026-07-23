@@ -1,5 +1,19 @@
 # Operations and Troubleshooting
 
+## Quick Navigation
+
+- [Baseline and first questions](#non-secret-baseline)
+- [Authentication and context](#authentication-and-context)
+- [Path and object resolution](#path-and-object-resolution)
+- [Upload and download problems](#upload-problems)
+- [Job states and failure reasons](#job-state-problems)
+- [Workflow analysis failures](#workflow-analysis-failures)
+- [Nextflow and dxCompiler](#nextflow)
+- [Debug access](#debug-access)
+- [Service limits and cost review](#service-limits)
+- [Destructive operations](#destructive-operations)
+- [Support bundle](#support-bundle)
+
 ## Non-Secret Baseline
 
 Start with:
@@ -477,7 +491,7 @@ Provide only:
 - User ID (if appropriate)
 - Project ID/region
 - Object, job, or analysis ID
-- App/appet/workflow ID and version
+- App/applet/workflow ID and version
 - Failure reason/message
 - API request ID
 - Minimal redacted log excerpt

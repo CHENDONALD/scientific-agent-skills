@@ -1,5 +1,18 @@
 # Python SDK (`dxpy`)
 
+## Quick Navigation
+
+- [Baseline and authentication](#baseline)
+- [Handlers and links](#handler-model)
+- [Describe and files](#describe)
+- [Search](#search)
+- [Projects and records](#projects-and-folders)
+- [Run executables](#run-executables)
+- [Wait and output](#wait-and-output)
+- [Exceptions](#exceptions)
+- [Low-level API bindings](#low-level-api-bindings)
+- [Reliability checklist](#reliability-checklist)
+
 ## Baseline
 
 This reference was verified against `dxpy==0.410.0` (released 2026-07-14).
@@ -17,11 +30,11 @@ For an isolated script:
 uv run --with "dxpy==0.410.0" "script.py"
 ```
 
-Inspect the installed API without authenticating:
+Inspect the installed API without authenticating. From this skill's root:
 
 ```bash
 uv run --with "dxpy==0.410.0" \
-  "skills/dnanexus-integration/scripts/inspect_dxpy.py" --strict
+  "scripts/inspect_dxpy.py" --strict
 ```
 
 ## Authentication
@@ -49,7 +62,7 @@ Use handlers for objects and executions:
 | `DXApplet` | Project-local executable |
 | `DXApp` | Versioned app |
 | `DXWorkflow` | Native workflow |
-| `DXJob` | App/appet execution |
+| `DXJob` | App/applet execution |
 | `DXAnalysis` | Workflow execution |
 | `DXProject` | Project/data container |
 
@@ -368,7 +381,7 @@ read-modify-write races on shared open records.
 
 ## Run Executables
 
-App/appet runs return `DXJob`:
+App/applet runs return `DXJob`:
 
 ```python
 job = dxpy.DXApplet(
@@ -429,27 +442,33 @@ from dxpy.exceptions import DXError, DXJobFailureError
 
 try:
     job.wait_on_done(interval=5, timeout=3600)
-except DXJobFailureError:
-    failure = job.describe(
+except DXJobFailureError as error:
+    status = job.describe(
         fields={
             "state": True,
             "failureReason": True,
             "failureMessage": True,
         }
     )
-    raise RuntimeError(
-        f"{failure.get('failureReason')}: "
-        f"{failure.get('failureMessage')}"
-    ) from None
+    state = status.get("state")
+    if state not in {"failed", "terminated"}:
+        raise TimeoutError(
+            f"local wait ended while remote job state is {state!r}"
+        ) from error
+    reason = status.get("failureReason") or "Terminated"
+    message = status.get("failureMessage") or str(error)
+    raise RuntimeError(f"{reason}: {message}") from error
 except DXError as error:
-    raise RuntimeError(f"wait failed: {error}") from error
+    raise RuntimeError(f"polling failed: {error}") from error
 
 outputs = job.describe(fields={"output": True})["output"]
 ```
 
 Defaults for `DXJob.wait_on_done()` and `DXAnalysis.wait_on_done()` are a
 two-second poll interval and a seven-day timeout. Set an explicit timeout that
-matches the caller's needs.
+matches the caller's needs. In dxpy 0.410.0, `DXJobFailureError` represents
+remote failure, termination, **or local wait timeout** despite the method
+docstring; re-describe state before classifying it.
 
 To chain jobs, avoid waiting:
 
@@ -466,7 +485,8 @@ Current public dxpy exception classes include:
 
 - `DXError`: base SDK error
 - `DXAPIError`: non-200 API response
-- `DXJobFailureError`: job/analysis wait detected failure
+- `DXJobFailureError`: job/analysis wait detected failure, termination, or
+  local timeout; re-describe remote state to distinguish them
 - `DXSearchError`: invalid or failed search
 - `DXFileError`: file operation failure
 - `DXChecksumMismatchError`: transfer integrity failure

@@ -140,7 +140,7 @@ The previous skill version contained examples that should not be copied:
 | `DXFile.open_file()` | Use `dxpy.open_dxfile()` |
 | `name="*.bam"` without mode | Add `name_mode="glob"` |
 | `ResourceNotFound` imported as dxpy exception | Inspect `DXAPIError.name` |
-| `job.wait_on_done()` followed by state branch | It raises `DXJobFailureError` on failure |
+| Treating every `wait_on_done()` exception as remote failure | In dxpy 0.410.0, `DXJobFailureError` also covers termination and local wait timeout; re-describe state |
 | Runtime `pip install` as primary dependency strategy | Prefer pinned venv/assets/saved images |
 | Pulling floating Docker tags | Pin digest and preferably store `docker save` tarball |
 | `dxpy.dxlink(job.get_output_ref(...))` | Pass `get_output_ref()` directly |
@@ -157,7 +157,7 @@ When updating this skill:
 
    ```bash
    uv run --with "dxpy==<new-version>" \
-     "skills/dnanexus-integration/scripts/inspect_dxpy.py" --strict
+     "scripts/inspect_dxpy.py" --strict
    ```
 
 5. Compare `dx build --help`, `dx run --help`, and search command help.

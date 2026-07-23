@@ -170,15 +170,25 @@ Bound broad searches with a project, folder, time range, and `limit`.
 
 ```bash
 dx-app-wizard
-uv run python "skills/dnanexus-integration/scripts/validate_dxapp.py" \
-  "./my-app/dxapp.json" --kind applet --strict
-dx build "./my-app"
+```
+
+Resolve bundled helpers relative to this skill directory. From the skill root:
+
+```bash
+uv run python "scripts/validate_dxapp.py" \
+  "/path/to/my-app/dxapp.json" --kind applet --strict
+```
+
+Then build the source directory:
+
+```bash
+dx build "/path/to/my-app"
 ```
 
 For a versioned app, use the current build form:
 
 ```bash
-dx build "./my-app" --create-app
+dx build "/path/to/my-app" --create-app
 ```
 
 New configurations should use Ubuntu 24.04 and
@@ -218,8 +228,9 @@ dx watch "job-xxxx" --get-streams
 
 A run of an app or applet returns a `job-...`; a run of a workflow returns an
 `analysis-...`. `dxpy.DXJob.wait_on_done()` and
-`dxpy.DXAnalysis.wait_on_done()` raise `DXJobFailureError` when an execution
-fails. See `references/job-execution.md`.
+`dxpy.DXAnalysis.wait_on_done()` can raise `DXJobFailureError` for remote
+failure, termination, or local wait timeout. Re-describe remote state before
+classifying it; see `references/job-execution.md`.
 
 ### Chain executions without polling
 
@@ -270,10 +281,13 @@ ready. Do not wrap `get_output_ref()` in `dxpy.dxlink()`.
 
 ## Bundled Helpers
 
+The commands below assume the current directory is this skill's root. Otherwise
+resolve `scripts/` relative to the loaded skill directory.
+
 ### Validate `dxapp.json`
 
 ```bash
-uv run python "skills/dnanexus-integration/scripts/validate_dxapp.py" \
+uv run python "scripts/validate_dxapp.py" \
   "path/to/dxapp.json" --kind app --strict
 ```
 
@@ -285,7 +299,7 @@ replaces, `dx build` validation.
 
 ```bash
 uv run --with "dxpy==0.410.0" \
-  "skills/dnanexus-integration/scripts/inspect_dxpy.py" --strict
+  "scripts/inspect_dxpy.py" --strict
 ```
 
 This performs offline symbol and signature checks. It does not authenticate or
