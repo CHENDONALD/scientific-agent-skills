@@ -1,0 +1,121 @@
+{
+  "name": "scientific-agent-skills",
+  "owner": {
+    "name": "CHENDONALD",
+    "url": "https://github.com/CHENDONALD"
+  },
+  "metadata": {
+    "description": "Curated subset of K-Dense scientific-agent-skills, grouped into 6 domain plugins for selective installation. Fork of K-Dense-AI/scientific-agent-skills with an added marketplace manifest.",
+    "version": "1.0.0",
+    "homepage": "https://github.com/CHENDONALD/scientific-agent-skills"
+  },
+  "plugins": [
+    {
+      "name": "ml-ai",
+      "source": "./",
+      "description": "机器学习与 AI: scikit-learn, PyTorch Lightning, Transformers, 图神经网络, 贝叶斯推断, 可解释性, 时序, 强化学习",
+      "version": "1.0.0",
+      "category": "machine-learning",
+      "keywords": ["machine-learning", "deep-learning", "ai", "scikit-learn", "pytorch", "transformers"],
+      "skills": [
+        "./skills/scikit-learn",
+        "./skills/pytorch-lightning",
+        "./skills/transformers",
+        "./skills/torch-geometric",
+        "./skills/pymc",
+        "./skills/shap",
+        "./skills/aeon",
+        "./skills/timesfm-forecasting",
+        "./skills/stable-baselines3",
+        "./skills/pufferlib"
+      ]
+    },
+    {
+      "name": "data-viz",
+      "source": "./",
+      "description": "数据分析与可视化: 绘图, 统计建模, 大数据处理, 地理空间, 探索性分析",
+      "version": "1.0.0",
+      "category": "data-analysis",
+      "keywords": ["data-analysis", "visualization", "statistics", "matplotlib", "polars"],
+      "skills": [
+        "./skills/matplotlib",
+        "./skills/seaborn",
+        "./skills/networkx",
+        "./skills/geopandas",
+        "./skills/polars",
+        "./skills/dask",
+        "./skills/statsmodels",
+        "./skills/statistical-analysis",
+        "./skills/exploratory-data-analysis",
+        "./skills/zarr-python"
+      ]
+    },
+    {
+      "name": "physics-material-quantum",
+      "source": "./",
+      "description": "物理、材料与量子: 晶体结构, 天文数据, 量子计算 (Qiskit/Cirq/PennyLane/QuTiP), 流体力学, 代谢建模",
+      "version": "1.0.0",
+      "category": "physics",
+      "keywords": ["physics", "materials", "quantum", "pymatgen", "qiskit"],
+      "skills": [
+        "./skills/pymatgen",
+        "./skills/astropy",
+        "./skills/qiskit",
+        "./skills/cirq",
+        "./skills/pennylane",
+        "./skills/qutip",
+        "./skills/fluidsim",
+        "./skills/cobrapy"
+      ]
+    },
+    {
+      "name": "writing",
+      "source": "./",
+      "description": "科研写作与沟通: 论文写作, 文献综述, 同行评审, 引用管理, 示意图, 幻灯片, 海报, 文档格式转换",
+      "version": "1.0.0",
+      "category": "scientific-writing",
+      "keywords": ["writing", "publishing", "peer-review", "citations", "latex"],
+      "skills": [
+        "./skills/scientific-writing",
+        "./skills/literature-review",
+        "./skills/peer-review",
+        "./skills/citation-management",
+        "./skills/scientific-schematics",
+        "./skills/scientific-slides",
+        "./skills/latex-posters",
+        "./skills/markitdown",
+        "./skills/pdf",
+        "./skills/docx",
+        "./skills/pptx"
+      ]
+    },
+    {
+      "name": "methodology",
+      "source": "./",
+      "description": "科研方法论: 假设生成, 实验设计, 批判性思维, 头脑风暴, 学者评估",
+      "version": "1.0.0",
+      "category": "research-methodology",
+      "keywords": ["methodology", "hypothesis", "experimental-design", "critical-thinking"],
+      "skills": [
+        "./skills/hypothesis-generation",
+        "./skills/experimental-design",
+        "./skills/scientific-critical-thinking",
+        "./skills/scientific-brainstorming",
+        "./skills/scholar-evaluation"
+      ]
+    },
+    {
+      "name": "data-access",
+      "source": "./",
+      "description": "数据库统一访问: 对接 78+ 公开科学数据库 (PubChem, ChEMBL, UniProt, ClinVar 等) 的统一检索接口",
+      "version": "1.0.0",
+      "category": "data-access",
+      "keywords": ["database", "data-access", "pubchem", "chembl", "uniprot"],
+      "skills": [
+        "./skills/database-lookup",
+        "./skills/research-lookup",
+        "./skills/get-available-resources"
+      ]
+    }
+  ]
+}
