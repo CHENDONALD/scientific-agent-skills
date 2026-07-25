@@ -1,0 +1,9 @@
+{
+  "name": "research-methodology-and-proposal-writing",
+  "description": "Research Methodology & Proposal Writing — 官方分类: Scientific Packages > Research Methodology & Proposal Writing",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/scholar-evaluation",
+    "./skills/research-lookup"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "bioinformatics-and-genomics",
+  "description": "Bioinformatics & Genomics — 官方分类: Scientific Packages > Bioinformatics & Genomics",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/zarr-python"
+  ]
+}

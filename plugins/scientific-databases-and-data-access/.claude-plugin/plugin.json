@@ -1,0 +1,8 @@
+{
+  "name": "scientific-databases-and-data-access",
+  "description": "Scientific Databases & Data Access — 官方分类: Scientific Databases & Data Access",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/database-lookup"
+  ]
+}
