@@ -1,8 +1,30 @@
 {
   "name": "bioinformatics-and-genomics",
-  "description": "Bioinformatics & Genomics — 官方分类: Scientific Packages > Bioinformatics & Genomics",
+  "description": "Bioinformatics & Genomics (官方: Scientific Packages > Bioinformatics & Genomics)",
   "version": "1.0.0",
   "skills": [
+    "./skills/anndata",
+    "./skills/arboreto",
+    "./skills/biopython",
+    "./skills/bioservices",
+    "./skills/bulk-rnaseq",
+    "./skills/cellxgene-census",
+    "./skills/deeptools",
+    "./skills/flowio",
+    "./skills/gget",
+    "./skills/genomic-intelligence",
+    "./skills/geniml",
+    "./skills/gtars",
+    "./skills/onekgpd",
+    "./skills/polars-bio",
+    "./skills/pysam",
+    "./skills/pydeseq2",
+    "./skills/pathway-enrichment",
+    "./skills/scanpy",
+    "./skills/scvelo",
+    "./skills/scvi-tools",
+    "./skills/scikit-bio",
+    "./skills/tiledbvcf",
     "./skills/zarr-python"
   ]
 }

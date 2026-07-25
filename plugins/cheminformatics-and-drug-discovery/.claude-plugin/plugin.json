@@ -1,0 +1,16 @@
+{
+  "name": "cheminformatics-and-drug-discovery",
+  "description": "Cheminformatics & Drug Discovery (官方: Scientific Packages > Cheminformatics & Drug Discovery)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/datamol",
+    "./skills/deepchem",
+    "./skills/diffdock",
+    "./skills/medchem",
+    "./skills/molfeat",
+    "./skills/pytdc",
+    "./skills/rdkit",
+    "./skills/rowan",
+    "./skills/torchdrug"
+  ]
+}

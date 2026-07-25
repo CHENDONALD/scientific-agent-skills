@@ -1,0 +1,10 @@
+{
+  "name": "workflow-platforms-and-cloud-execution",
+  "description": "Workflow Platforms & Cloud Execution (官方: Scientific Integrations > Workflow Platforms & Cloud Execution)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/latchbio-integration",
+    "./skills/nextflow",
+    "./skills/pacsomatic"
+  ]
+}

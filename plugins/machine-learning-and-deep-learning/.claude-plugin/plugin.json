@@ -1,22 +1,25 @@
 {
   "name": "machine-learning-and-deep-learning",
-  "description": "Machine Learning & Deep Learning — 官方分类: Scientific Packages > Machine Learning & Deep Learning",
+  "description": "Machine Learning & Deep Learning (官方: Scientific Packages > Machine Learning & Deep Learning)",
   "version": "1.0.0",
   "skills": [
-    "./skills/scikit-learn",
-    "./skills/pytorch-lightning",
-    "./skills/transformers",
-    "./skills/torch-geometric",
-    "./skills/pymc",
-    "./skills/shap",
     "./skills/aeon",
-    "./skills/timesfm-forecasting",
-    "./skills/stable-baselines3",
-    "./skills/pufferlib",
-    "./skills/statsmodels",
-    "./skills/qiskit",
     "./skills/cirq",
+    "./skills/pufferlib",
+    "./skills/pymc",
+    "./skills/pymoo",
+    "./skills/pytorch-lightning",
     "./skills/pennylane",
-    "./skills/qutip"
+    "./skills/qiskit",
+    "./skills/qutip",
+    "./skills/scikit-learn",
+    "./skills/scikit-survival",
+    "./skills/shap",
+    "./skills/stable-baselines3",
+    "./skills/statsmodels",
+    "./skills/timesfm-forecasting",
+    "./skills/torch-geometric",
+    "./skills/transformers",
+    "./skills/umap-learn"
   ]
 }

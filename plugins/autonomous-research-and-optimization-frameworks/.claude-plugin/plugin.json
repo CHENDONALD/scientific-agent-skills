@@ -1,0 +1,8 @@
+{
+  "name": "autonomous-research-and-optimization-frameworks",
+  "description": "Autonomous Research & Optimization Frameworks (官方: Scientific Packages > Autonomous Research & Optimization Frameworks)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/arbor"
+  ]
+}

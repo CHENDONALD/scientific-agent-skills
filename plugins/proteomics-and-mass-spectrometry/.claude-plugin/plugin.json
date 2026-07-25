@@ -1,0 +1,9 @@
+{
+  "name": "proteomics-and-mass-spectrometry",
+  "description": "Proteomics & Mass Spectrometry (官方: Scientific Packages > Proteomics & Mass Spectrometry)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/matchms",
+    "./skills/pyopenms"
+  ]
+}

@@ -1,13 +1,15 @@
 {
   "name": "data-analysis-and-visualization",
-  "description": "Data Analysis & Visualization — 官方分类: Scientific Packages > Data Analysis & Visualization",
+  "description": "Data Analysis & Visualization (官方: Scientific Packages > Data Analysis & Visualization)",
   "version": "1.0.0",
   "skills": [
-    "./skills/matplotlib",
-    "./skills/seaborn",
-    "./skills/networkx",
+    "./skills/dask",
+    "./skills/geomaster",
     "./skills/geopandas",
+    "./skills/matplotlib",
+    "./skills/networkx",
     "./skills/polars",
-    "./skills/dask"
+    "./skills/seaborn",
+    "./skills/vaex"
   ]
 }
