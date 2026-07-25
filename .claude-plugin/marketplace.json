@@ -5,18 +5,113 @@
     "url": "https://github.com/CHENDONALD"
   },
   "metadata": {
-    "description": "Curated subset of K-Dense scientific-agent-skills, grouped into 6 domain plugins for selective installation. Fork of K-Dense-AI/scientific-agent-skills with an added marketplace manifest.",
-    "version": "1.0.0",
+    "description": "Curated subset of K-Dense scientific-agent-skills (47 skills), grouped strictly by the official taxonomy in docs/skills.md. Fork-local manifest; stays in sync with upstream via git merge.",
+    "version": "2.0.0",
     "homepage": "https://github.com/CHENDONALD/scientific-agent-skills"
   },
   "plugins": [
     {
-      "name": "ml-ai",
+      "name": "analysis-and-methodology",
       "source": "./",
-      "description": "机器学习与 AI: scikit-learn, PyTorch Lightning, Transformers, 图神经网络, 贝叶斯推断, 可解释性, 时序, 强化学习",
+      "description": "Analysis & Methodology — 官方分类: Scientific Thinking & Analysis > Analysis & Methodology",
       "version": "1.0.0",
-      "category": "machine-learning",
-      "keywords": ["machine-learning", "deep-learning", "ai", "scikit-learn", "pytorch", "transformers"],
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific thinking & analysis"
+      ],
+      "skills": [
+        "./skills/statistical-analysis",
+        "./skills/exploratory-data-analysis",
+        "./skills/scientific-writing",
+        "./skills/literature-review",
+        "./skills/peer-review",
+        "./skills/hypothesis-generation",
+        "./skills/experimental-design",
+        "./skills/scientific-critical-thinking",
+        "./skills/scientific-brainstorming"
+      ]
+    },
+    {
+      "name": "bioinformatics-and-genomics",
+      "source": "./",
+      "description": "Bioinformatics & Genomics — 官方分类: Scientific Packages > Bioinformatics & Genomics",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
+      "skills": [
+        "./skills/zarr-python"
+      ]
+    },
+    {
+      "name": "data-analysis-and-visualization",
+      "source": "./",
+      "description": "Data Analysis & Visualization — 官方分类: Scientific Packages > Data Analysis & Visualization",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
+      "skills": [
+        "./skills/matplotlib",
+        "./skills/seaborn",
+        "./skills/networkx",
+        "./skills/geopandas",
+        "./skills/polars",
+        "./skills/dask"
+      ]
+    },
+    {
+      "name": "document-processing-and-conversion",
+      "source": "./",
+      "description": "Document Processing & Conversion — 官方分类: Scientific Packages > Document Processing & Conversion",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
+      "skills": [
+        "./skills/markitdown",
+        "./skills/pdf",
+        "./skills/docx",
+        "./skills/pptx"
+      ]
+    },
+    {
+      "name": "engineering-and-simulation",
+      "source": "./",
+      "description": "Engineering & Simulation — 官方分类: Scientific Packages > Engineering & Simulation",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
+      "skills": [
+        "./skills/fluidsim"
+      ]
+    },
+    {
+      "name": "machine-learning-and-deep-learning",
+      "source": "./",
+      "description": "Machine Learning & Deep Learning — 官方分类: Scientific Packages > Machine Learning & Deep Learning",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
       "skills": [
         "./skills/scikit-learn",
         "./skills/pytorch-lightning",
@@ -27,93 +122,92 @@
         "./skills/aeon",
         "./skills/timesfm-forecasting",
         "./skills/stable-baselines3",
-        "./skills/pufferlib"
-      ]
-    },
-    {
-      "name": "data-viz",
-      "source": "./",
-      "description": "数据分析与可视化: 绘图, 统计建模, 大数据处理, 地理空间, 探索性分析",
-      "version": "1.0.0",
-      "category": "data-analysis",
-      "keywords": ["data-analysis", "visualization", "statistics", "matplotlib", "polars"],
-      "skills": [
-        "./skills/matplotlib",
-        "./skills/seaborn",
-        "./skills/networkx",
-        "./skills/geopandas",
-        "./skills/polars",
-        "./skills/dask",
+        "./skills/pufferlib",
         "./skills/statsmodels",
-        "./skills/statistical-analysis",
-        "./skills/exploratory-data-analysis",
-        "./skills/zarr-python"
-      ]
-    },
-    {
-      "name": "physics-material-quantum",
-      "source": "./",
-      "description": "物理、材料与量子: 晶体结构, 天文数据, 量子计算 (Qiskit/Cirq/PennyLane/QuTiP), 流体力学, 代谢建模",
-      "version": "1.0.0",
-      "category": "physics",
-      "keywords": ["physics", "materials", "quantum", "pymatgen", "qiskit"],
-      "skills": [
-        "./skills/pymatgen",
-        "./skills/astropy",
         "./skills/qiskit",
         "./skills/cirq",
         "./skills/pennylane",
-        "./skills/qutip",
-        "./skills/fluidsim",
+        "./skills/qutip"
+      ]
+    },
+    {
+      "name": "materials-science-and-chemistry",
+      "source": "./",
+      "description": "Materials Science & Chemistry — 官方分类: Scientific Packages > Materials Science & Chemistry",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
+      "skills": [
+        "./skills/pymatgen",
+        "./skills/astropy",
         "./skills/cobrapy"
       ]
     },
     {
-      "name": "writing",
+      "name": "research-methodology-and-proposal-writing",
       "source": "./",
-      "description": "科研写作与沟通: 论文写作, 文献综述, 同行评审, 引用管理, 示意图, 幻灯片, 海报, 文档格式转换",
+      "description": "Research Methodology & Proposal Writing — 官方分类: Scientific Packages > Research Methodology & Proposal Writing",
       "version": "1.0.0",
-      "category": "scientific-writing",
-      "keywords": ["writing", "publishing", "peer-review", "citations", "latex"],
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
       "skills": [
-        "./skills/scientific-writing",
-        "./skills/literature-review",
-        "./skills/peer-review",
+        "./skills/scholar-evaluation",
+        "./skills/research-lookup"
+      ]
+    },
+    {
+      "name": "scientific-communication-and-publishing",
+      "source": "./",
+      "description": "Scientific Communication & Publishing — 官方分类: Scientific Packages > Scientific Communication & Publishing",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
+      "skills": [
         "./skills/citation-management",
         "./skills/scientific-schematics",
         "./skills/scientific-slides",
-        "./skills/latex-posters",
-        "./skills/markitdown",
-        "./skills/pdf",
-        "./skills/docx",
-        "./skills/pptx"
+        "./skills/latex-posters"
       ]
     },
     {
-      "name": "methodology",
+      "name": "scientific-databases-and-data-access",
       "source": "./",
-      "description": "科研方法论: 假设生成, 实验设计, 批判性思维, 头脑风暴, 学者评估",
+      "description": "Scientific Databases & Data Access — 官方分类: Scientific Databases & Data Access",
       "version": "1.0.0",
-      "category": "research-methodology",
-      "keywords": ["methodology", "hypothesis", "experimental-design", "critical-thinking"],
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific databases & data access"
+      ],
       "skills": [
-        "./skills/hypothesis-generation",
-        "./skills/experimental-design",
-        "./skills/scientific-critical-thinking",
-        "./skills/scientific-brainstorming",
-        "./skills/scholar-evaluation"
+        "./skills/database-lookup"
       ]
     },
     {
-      "name": "data-access",
+      "name": "tool-discovery-and-computational-resources",
       "source": "./",
-      "description": "数据库统一访问: 对接 78+ 公开科学数据库 (PubChem, ChEMBL, UniProt, ClinVar 等) 的统一检索接口",
+      "description": "Tool Discovery & Computational Resources — 官方分类: Scientific Packages > Tool Discovery & Computational Resources",
       "version": "1.0.0",
-      "category": "data-access",
-      "keywords": ["database", "data-access", "pubchem", "chembl", "uniprot"],
+      "category": "science",
+      "keywords": [
+        "curated",
+        "official-taxonomy",
+        "scientific packages"
+      ],
       "skills": [
-        "./skills/database-lookup",
-        "./skills/research-lookup",
         "./skills/get-available-resources"
       ]
     }
