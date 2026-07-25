@@ -5,141 +5,372 @@
     "url": "https://github.com/CHENDONALD"
   },
   "metadata": {
-    "description": "Fork of K-Dense-AI/scientific-agent-skills. Each of the 11 official subcategories is a separate plugin in plugins/<name>/ with its own skills/ subdir, so ZCode only loads that group's skills (physical isolation via source path).",
-    "version": "3.0.0",
+    "description": "Fork of K-Dense-AI/scientific-agent-skills. ALL 150 skills grouped into 33 plugins by the official docs/skills.md taxonomy, each physically isolated in plugins/<subcategory>/. Root skills/ removed — zero residual.",
+    "version": "5.0.0",
     "homepage": "https://github.com/CHENDONALD/scientific-agent-skills"
   },
   "plugins": [
     {
-      "name": "analysis-and-methodology",
-      "source": "./plugins/analysis-and-methodology",
-      "description": "Analysis & Methodology — 官方分类: Scientific Thinking & Analysis > Analysis & Methodology",
+      "name": "agent-frameworks",
+      "source": "./plugins/agent-frameworks",
+      "description": "Agent Frameworks (官方: Scientific Packages > Agent Frameworks)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific thinking & analysis"
+        "agent-frameworks"
+      ]
+    },
+    {
+      "name": "analysis-and-methodology",
+      "source": "./plugins/analysis-and-methodology",
+      "description": "Analysis & Methodology (官方: Scientific Thinking & Analysis > Analysis & Methodology)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "analysis-and-methodology"
+      ]
+    },
+    {
+      "name": "autonomous-research-and-optimization-frameworks",
+      "source": "./plugins/autonomous-research-and-optimization-frameworks",
+      "description": "Autonomous Research & Optimization Frameworks (官方: Scientific Packages > Autonomous Research & Optimization Frameworks)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "autonomous-research-and-optimization-frameworks"
       ]
     },
     {
       "name": "bioinformatics-and-genomics",
       "source": "./plugins/bioinformatics-and-genomics",
-      "description": "Bioinformatics & Genomics — 官方分类: Scientific Packages > Bioinformatics & Genomics",
+      "description": "Bioinformatics & Genomics (官方: Scientific Packages > Bioinformatics & Genomics)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "bioinformatics-and-genomics"
+      ]
+    },
+    {
+      "name": "cheminformatics-and-drug-discovery",
+      "source": "./plugins/cheminformatics-and-drug-discovery",
+      "description": "Cheminformatics & Drug Discovery (官方: Scientific Packages > Cheminformatics & Drug Discovery)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "cheminformatics-and-drug-discovery"
+      ]
+    },
+    {
+      "name": "clinical-documentation-and-decision-support",
+      "source": "./plugins/clinical-documentation-and-decision-support",
+      "description": "Clinical Documentation & Decision Support (官方: Scientific Packages > Clinical Documentation & Decision Support)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "clinical-documentation-and-decision-support"
+      ]
+    },
+    {
+      "name": "cloud-platforms-for-genomics-and-biomedical-data",
+      "source": "./plugins/cloud-platforms-for-genomics-and-biomedical-data",
+      "description": "Cloud Platforms for Genomics & Biomedical Data (官方: Scientific Integrations > Cloud Platforms for Genomics & Biomedical Data)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "cloud-platforms-for-genomics-and-biomedical-data"
       ]
     },
     {
       "name": "data-analysis-and-visualization",
       "source": "./plugins/data-analysis-and-visualization",
-      "description": "Data Analysis & Visualization — 官方分类: Scientific Packages > Data Analysis & Visualization",
+      "description": "Data Analysis & Visualization (官方: Scientific Packages > Data Analysis & Visualization)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "data-analysis-and-visualization"
+      ]
+    },
+    {
+      "name": "data-management-and-infrastructure",
+      "source": "./plugins/data-management-and-infrastructure",
+      "description": "Data Management & Infrastructure (官方: Scientific Packages > Data Management & Infrastructure)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "data-management-and-infrastructure"
+      ]
+    },
+    {
+      "name": "decision-and-scenario-analysis",
+      "source": "./plugins/decision-and-scenario-analysis",
+      "description": "Decision & Scenario Analysis (官方: Scientific Thinking & Analysis > Decision & Scenario Analysis)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "decision-and-scenario-analysis"
       ]
     },
     {
       "name": "document-processing-and-conversion",
       "source": "./plugins/document-processing-and-conversion",
-      "description": "Document Processing & Conversion — 官方分类: Scientific Packages > Document Processing & Conversion",
+      "description": "Document Processing & Conversion (官方: Scientific Packages > Document Processing & Conversion)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "document-processing-and-conversion"
+      ]
+    },
+    {
+      "name": "electronic-lab-notebooks-eln",
+      "source": "./plugins/electronic-lab-notebooks-eln",
+      "description": "Electronic Lab Notebooks (ELN) (官方: Scientific Integrations > Electronic Lab Notebooks (ELN))",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "electronic-lab-notebooks-eln"
       ]
     },
     {
       "name": "engineering-and-simulation",
       "source": "./plugins/engineering-and-simulation",
-      "description": "Engineering & Simulation — 官方分类: Scientific Packages > Engineering & Simulation",
+      "description": "Engineering & Simulation (官方: Scientific Packages > Engineering & Simulation)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "engineering-and-simulation"
+      ]
+    },
+    {
+      "name": "healthcare-ai-and-clinical-machine-learning",
+      "source": "./plugins/healthcare-ai-and-clinical-machine-learning",
+      "description": "Healthcare AI & Clinical Machine Learning (官方: Scientific Packages > Healthcare AI & Clinical Machine Learning)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "healthcare-ai-and-clinical-machine-learning"
+      ]
+    },
+    {
+      "name": "laboratory-automation",
+      "source": "./plugins/laboratory-automation",
+      "description": "Laboratory Automation (官方: Scientific Integrations > Laboratory Automation)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "laboratory-automation"
+      ]
+    },
+    {
+      "name": "laboratory-automation-and-equipment-control",
+      "source": "./plugins/laboratory-automation-and-equipment-control",
+      "description": "Laboratory Automation & Equipment Control (官方: Scientific Packages > Laboratory Automation & Equipment Control)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "laboratory-automation-and-equipment-control"
+      ]
+    },
+    {
+      "name": "laboratory-information-management-systems-lims-and-randd-platforms",
+      "source": "./plugins/laboratory-information-management-systems-lims-and-randd-platforms",
+      "description": "Laboratory Information Management Systems (LIMS) & R&D Platforms (官方: Scientific Integrations > Laboratory Information Management Systems (LIMS) & R&D Platforms)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "laboratory-information-management-systems-lims-and-randd-platforms"
       ]
     },
     {
       "name": "machine-learning-and-deep-learning",
       "source": "./plugins/machine-learning-and-deep-learning",
-      "description": "Machine Learning & Deep Learning — 官方分类: Scientific Packages > Machine Learning & Deep Learning",
+      "description": "Machine Learning & Deep Learning (官方: Scientific Packages > Machine Learning & Deep Learning)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "machine-learning-and-deep-learning"
       ]
     },
     {
       "name": "materials-science-and-chemistry",
       "source": "./plugins/materials-science-and-chemistry",
-      "description": "Materials Science & Chemistry — 官方分类: Scientific Packages > Materials Science & Chemistry",
+      "description": "Materials Science & Chemistry (官方: Scientific Packages > Materials Science & Chemistry)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "materials-science-and-chemistry"
+      ]
+    },
+    {
+      "name": "medical-imaging-and-digital-pathology",
+      "source": "./plugins/medical-imaging-and-digital-pathology",
+      "description": "Medical Imaging & Digital Pathology (官方: Scientific Packages > Medical Imaging & Digital Pathology)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "medical-imaging-and-digital-pathology"
+      ]
+    },
+    {
+      "name": "microscopy-and-bio-image-data",
+      "source": "./plugins/microscopy-and-bio-image-data",
+      "description": "Microscopy & Bio-image Data (官方: Scientific Integrations > Microscopy & Bio-image Data)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "microscopy-and-bio-image-data"
+      ]
+    },
+    {
+      "name": "neuroscience-and-electrophysiology",
+      "source": "./plugins/neuroscience-and-electrophysiology",
+      "description": "Neuroscience & Electrophysiology (官方: Scientific Packages > Neuroscience & Electrophysiology)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "neuroscience-and-electrophysiology"
+      ]
+    },
+    {
+      "name": "phylogenetics-and-evolutionary-biology",
+      "source": "./plugins/phylogenetics-and-evolutionary-biology",
+      "description": "Phylogenetics & Evolutionary Biology (官方: Scientific Packages > Phylogenetics & Evolutionary Biology)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "phylogenetics-and-evolutionary-biology"
+      ]
+    },
+    {
+      "name": "protein-engineering-and-design",
+      "source": "./plugins/protein-engineering-and-design",
+      "description": "Protein Engineering & Design (官方: Scientific Packages > Protein Engineering & Design)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "protein-engineering-and-design"
+      ]
+    },
+    {
+      "name": "proteomics-and-mass-spectrometry",
+      "source": "./plugins/proteomics-and-mass-spectrometry",
+      "description": "Proteomics & Mass Spectrometry (官方: Scientific Packages > Proteomics & Mass Spectrometry)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "proteomics-and-mass-spectrometry"
+      ]
+    },
+    {
+      "name": "protocol-management-and-sharing",
+      "source": "./plugins/protocol-management-and-sharing",
+      "description": "Protocol Management & Sharing (官方: Scientific Integrations > Protocol Management & Sharing)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "protocol-management-and-sharing"
+      ]
+    },
+    {
+      "name": "regulatory-and-standards-evidence-preparation",
+      "source": "./plugins/regulatory-and-standards-evidence-preparation",
+      "description": "Regulatory & Standards Evidence Preparation (官方: Scientific Packages > Regulatory & Standards Evidence Preparation)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "regulatory-and-standards-evidence-preparation"
       ]
     },
     {
       "name": "research-methodology-and-proposal-writing",
       "source": "./plugins/research-methodology-and-proposal-writing",
-      "description": "Research Methodology & Proposal Writing — 官方分类: Scientific Packages > Research Methodology & Proposal Writing",
+      "description": "Research Methodology & Proposal Writing (官方: Scientific Packages > Research Methodology & Proposal Writing)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "research-methodology-and-proposal-writing"
       ]
     },
     {
       "name": "scientific-communication-and-publishing",
       "source": "./plugins/scientific-communication-and-publishing",
-      "description": "Scientific Communication & Publishing — 官方分类: Scientific Packages > Scientific Communication & Publishing",
+      "description": "Scientific Communication & Publishing (官方: Scientific Packages > Scientific Communication & Publishing)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "scientific-communication-and-publishing"
       ]
     },
     {
       "name": "scientific-databases-and-data-access",
       "source": "./plugins/scientific-databases-and-data-access",
-      "description": "Scientific Databases & Data Access — 官方分类: Scientific Databases & Data Access",
+      "description": "Scientific Databases & Data Access (官方: Scientific Databases & Data Access > Scientific Databases & Data Access)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific databases & data access"
+        "scientific-databases-and-data-access"
       ]
     },
     {
       "name": "tool-discovery-and-computational-resources",
       "source": "./plugins/tool-discovery-and-computational-resources",
-      "description": "Tool Discovery & Computational Resources — 官方分类: Scientific Packages > Tool Discovery & Computational Resources",
+      "description": "Tool Discovery & Computational Resources (官方: Scientific Packages > Tool Discovery & Computational Resources)",
       "version": "1.0.0",
       "category": "science",
       "keywords": [
-        "curated",
         "official-taxonomy",
-        "scientific packages"
+        "tool-discovery-and-computational-resources"
+      ]
+    },
+    {
+      "name": "web-search-and-information-retrieval",
+      "source": "./plugins/web-search-and-information-retrieval",
+      "description": "Web Search & Information Retrieval (官方: Scientific Thinking & Analysis > Web Search & Information Retrieval)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "web-search-and-information-retrieval"
+      ]
+    },
+    {
+      "name": "workflow-platforms-and-cloud-execution",
+      "source": "./plugins/workflow-platforms-and-cloud-execution",
+      "description": "Workflow Platforms & Cloud Execution (官方: Scientific Integrations > Workflow Platforms & Cloud Execution)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "workflow-platforms-and-cloud-execution"
       ]
     }
   ]

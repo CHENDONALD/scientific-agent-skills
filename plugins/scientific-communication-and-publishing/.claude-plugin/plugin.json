@@ -1,11 +1,18 @@
 {
   "name": "scientific-communication-and-publishing",
-  "description": "Scientific Communication & Publishing — 官方分类: Scientific Packages > Scientific Communication & Publishing",
+  "description": "Scientific Communication & Publishing (官方: Scientific Packages > Scientific Communication & Publishing)",
   "version": "1.0.0",
   "skills": [
+    "./skills/bgpt-paper-search",
+    "./skills/pyzotero",
     "./skills/citation-management",
+    "./skills/generate-image",
+    "./skills/infographics",
+    "./skills/latex-posters",
+    "./skills/market-research-reports",
+    "./skills/pptx-posters",
     "./skills/scientific-schematics",
     "./skills/scientific-slides",
-    "./skills/latex-posters"
+    "./skills/venue-templates"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "electronic-lab-notebooks-eln",
+  "description": "Electronic Lab Notebooks (ELN) (官方: Scientific Integrations > Electronic Lab Notebooks (ELN))",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/labarchive-integration",
+    "./skills/open-notebook"
+  ]
+}

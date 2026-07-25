@@ -1,0 +1,9 @@
+{
+  "name": "phylogenetics-and-evolutionary-biology",
+  "description": "Phylogenetics & Evolutionary Biology (官方: Scientific Packages > Phylogenetics & Evolutionary Biology)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/etetoolkit",
+    "./skills/phylogenetics"
+  ]
+}

@@ -1,8 +1,13 @@
 {
   "name": "scientific-databases-and-data-access",
-  "description": "Scientific Databases & Data Access — 官方分类: Scientific Databases & Data Access",
+  "description": "Scientific Databases & Data Access (官方: Scientific Databases & Data Access > Scientific Databases & Data Access)",
   "version": "1.0.0",
   "skills": [
-    "./skills/database-lookup"
+    "./skills/database-lookup",
+    "./skills/depmap",
+    "./skills/imaging-data-commons",
+    "./skills/primekg",
+    "./skills/usfiscaldata",
+    "./skills/hugging-science"
   ]
 }

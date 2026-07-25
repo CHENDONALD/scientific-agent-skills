@@ -1,0 +1,10 @@
+{
+  "name": "clinical-documentation-and-decision-support",
+  "description": "Clinical Documentation & Decision Support (官方: Scientific Packages > Clinical Documentation & Decision Support)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/clinical-decision-support",
+    "./skills/clinical-reports",
+    "./skills/treatment-plans"
+  ]
+}

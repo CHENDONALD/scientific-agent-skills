@@ -1,0 +1,8 @@
+{
+  "name": "laboratory-automation-and-equipment-control",
+  "description": "Laboratory Automation & Equipment Control (官方: Scientific Packages > Laboratory Automation & Equipment Control)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/pylabrobot"
+  ]
+}
