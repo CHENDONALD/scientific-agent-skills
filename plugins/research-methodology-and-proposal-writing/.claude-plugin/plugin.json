@@ -7,7 +7,6 @@
     "./skills/paper-lookup",
     "./skills/research-grants",
     "./skills/research-lookup",
-    "./skills/scholar-evaluation",
-    "./skills/expert-dispatch"
+    "./skills/scholar-evaluation"
   ]
 }
