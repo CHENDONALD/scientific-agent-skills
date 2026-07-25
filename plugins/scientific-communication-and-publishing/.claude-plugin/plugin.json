@@ -1,0 +1,11 @@
+{
+  "name": "scientific-communication-and-publishing",
+  "description": "Scientific Communication & Publishing — 官方分类: Scientific Packages > Scientific Communication & Publishing",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/citation-management",
+    "./skills/scientific-schematics",
+    "./skills/scientific-slides",
+    "./skills/latex-posters"
+  ]
+}

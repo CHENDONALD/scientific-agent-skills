@@ -1,0 +1,8 @@
+{
+  "name": "tool-discovery-and-computational-resources",
+  "description": "Tool Discovery & Computational Resources — 官方分类: Scientific Packages > Tool Discovery & Computational Resources",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/get-available-resources"
+  ]
+}

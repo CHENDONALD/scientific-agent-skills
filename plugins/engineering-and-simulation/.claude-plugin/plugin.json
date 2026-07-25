@@ -1,0 +1,8 @@
+{
+  "name": "engineering-and-simulation",
+  "description": "Engineering & Simulation — 官方分类: Scientific Packages > Engineering & Simulation",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/fluidsim"
+  ]
+}

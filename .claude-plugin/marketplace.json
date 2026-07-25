@@ -5,14 +5,14 @@
     "url": "https://github.com/CHENDONALD"
   },
   "metadata": {
-    "description": "Curated subset of K-Dense scientific-agent-skills (47 skills), grouped strictly by the official taxonomy in docs/skills.md. Fork-local manifest; stays in sync with upstream via git merge.",
-    "version": "2.0.0",
+    "description": "Fork of K-Dense-AI/scientific-agent-skills. Each of the 11 official subcategories is a separate plugin in plugins/<name>/ with its own skills/ subdir, so ZCode only loads that group's skills (physical isolation via source path).",
+    "version": "3.0.0",
     "homepage": "https://github.com/CHENDONALD/scientific-agent-skills"
   },
   "plugins": [
     {
       "name": "analysis-and-methodology",
-      "source": "./",
+      "source": "./plugins/analysis-and-methodology",
       "description": "Analysis & Methodology — 官方分类: Scientific Thinking & Analysis > Analysis & Methodology",
       "version": "1.0.0",
       "category": "science",
@@ -20,22 +20,11 @@
         "curated",
         "official-taxonomy",
         "scientific thinking & analysis"
-      ],
-      "skills": [
-        "./skills/statistical-analysis",
-        "./skills/exploratory-data-analysis",
-        "./skills/scientific-writing",
-        "./skills/literature-review",
-        "./skills/peer-review",
-        "./skills/hypothesis-generation",
-        "./skills/experimental-design",
-        "./skills/scientific-critical-thinking",
-        "./skills/scientific-brainstorming"
       ]
     },
     {
       "name": "bioinformatics-and-genomics",
-      "source": "./",
+      "source": "./plugins/bioinformatics-and-genomics",
       "description": "Bioinformatics & Genomics — 官方分类: Scientific Packages > Bioinformatics & Genomics",
       "version": "1.0.0",
       "category": "science",
@@ -43,14 +32,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/zarr-python"
       ]
     },
     {
       "name": "data-analysis-and-visualization",
-      "source": "./",
+      "source": "./plugins/data-analysis-and-visualization",
       "description": "Data Analysis & Visualization — 官方分类: Scientific Packages > Data Analysis & Visualization",
       "version": "1.0.0",
       "category": "science",
@@ -58,19 +44,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/matplotlib",
-        "./skills/seaborn",
-        "./skills/networkx",
-        "./skills/geopandas",
-        "./skills/polars",
-        "./skills/dask"
       ]
     },
     {
       "name": "document-processing-and-conversion",
-      "source": "./",
+      "source": "./plugins/document-processing-and-conversion",
       "description": "Document Processing & Conversion — 官方分类: Scientific Packages > Document Processing & Conversion",
       "version": "1.0.0",
       "category": "science",
@@ -78,17 +56,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/markitdown",
-        "./skills/pdf",
-        "./skills/docx",
-        "./skills/pptx"
       ]
     },
     {
       "name": "engineering-and-simulation",
-      "source": "./",
+      "source": "./plugins/engineering-and-simulation",
       "description": "Engineering & Simulation — 官方分类: Scientific Packages > Engineering & Simulation",
       "version": "1.0.0",
       "category": "science",
@@ -96,14 +68,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/fluidsim"
       ]
     },
     {
       "name": "machine-learning-and-deep-learning",
-      "source": "./",
+      "source": "./plugins/machine-learning-and-deep-learning",
       "description": "Machine Learning & Deep Learning — 官方分类: Scientific Packages > Machine Learning & Deep Learning",
       "version": "1.0.0",
       "category": "science",
@@ -111,28 +80,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/scikit-learn",
-        "./skills/pytorch-lightning",
-        "./skills/transformers",
-        "./skills/torch-geometric",
-        "./skills/pymc",
-        "./skills/shap",
-        "./skills/aeon",
-        "./skills/timesfm-forecasting",
-        "./skills/stable-baselines3",
-        "./skills/pufferlib",
-        "./skills/statsmodels",
-        "./skills/qiskit",
-        "./skills/cirq",
-        "./skills/pennylane",
-        "./skills/qutip"
       ]
     },
     {
       "name": "materials-science-and-chemistry",
-      "source": "./",
+      "source": "./plugins/materials-science-and-chemistry",
       "description": "Materials Science & Chemistry — 官方分类: Scientific Packages > Materials Science & Chemistry",
       "version": "1.0.0",
       "category": "science",
@@ -140,16 +92,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/pymatgen",
-        "./skills/astropy",
-        "./skills/cobrapy"
       ]
     },
     {
       "name": "research-methodology-and-proposal-writing",
-      "source": "./",
+      "source": "./plugins/research-methodology-and-proposal-writing",
       "description": "Research Methodology & Proposal Writing — 官方分类: Scientific Packages > Research Methodology & Proposal Writing",
       "version": "1.0.0",
       "category": "science",
@@ -157,15 +104,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/scholar-evaluation",
-        "./skills/research-lookup"
       ]
     },
     {
       "name": "scientific-communication-and-publishing",
-      "source": "./",
+      "source": "./plugins/scientific-communication-and-publishing",
       "description": "Scientific Communication & Publishing — 官方分类: Scientific Packages > Scientific Communication & Publishing",
       "version": "1.0.0",
       "category": "science",
@@ -173,17 +116,11 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/citation-management",
-        "./skills/scientific-schematics",
-        "./skills/scientific-slides",
-        "./skills/latex-posters"
       ]
     },
     {
       "name": "scientific-databases-and-data-access",
-      "source": "./",
+      "source": "./plugins/scientific-databases-and-data-access",
       "description": "Scientific Databases & Data Access — 官方分类: Scientific Databases & Data Access",
       "version": "1.0.0",
       "category": "science",
@@ -191,14 +128,11 @@
         "curated",
         "official-taxonomy",
         "scientific databases & data access"
-      ],
-      "skills": [
-        "./skills/database-lookup"
       ]
     },
     {
       "name": "tool-discovery-and-computational-resources",
-      "source": "./",
+      "source": "./plugins/tool-discovery-and-computational-resources",
       "description": "Tool Discovery & Computational Resources — 官方分类: Scientific Packages > Tool Discovery & Computational Resources",
       "version": "1.0.0",
       "category": "science",
@@ -206,9 +140,6 @@
         "curated",
         "official-taxonomy",
         "scientific packages"
-      ],
-      "skills": [
-        "./skills/get-available-resources"
       ]
     }
   ]

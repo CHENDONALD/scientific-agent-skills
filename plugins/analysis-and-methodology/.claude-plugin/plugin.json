@@ -1,0 +1,16 @@
+{
+  "name": "analysis-and-methodology",
+  "description": "Analysis & Methodology — 官方分类: Scientific Thinking & Analysis > Analysis & Methodology",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/statistical-analysis",
+    "./skills/exploratory-data-analysis",
+    "./skills/scientific-writing",
+    "./skills/literature-review",
+    "./skills/peer-review",
+    "./skills/hypothesis-generation",
+    "./skills/experimental-design",
+    "./skills/scientific-critical-thinking",
+    "./skills/scientific-brainstorming"
+  ]
+}
