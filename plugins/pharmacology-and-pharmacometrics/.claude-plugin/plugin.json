@@ -1,0 +1,8 @@
+{
+  "name": "pharmacology-and-pharmacometrics",
+  "description": "Pharmacology & Pharmacometrics (官方: Scientific Packages > Pharmacology & Pharmacometrics)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/pkpd-modeling"
+  ]
+}

@@ -3,8 +3,9 @@
   "description": "Research Methodology & Proposal Writing (官方: Scientific Packages > Research Methodology & Proposal Writing)",
   "version": "1.0.0",
   "skills": [
-    "./skills/paperzilla",
     "./skills/paper-lookup",
+    "./skills/paperclip",
+    "./skills/paperzilla",
     "./skills/research-grants",
     "./skills/research-lookup",
     "./skills/scholar-evaluation"

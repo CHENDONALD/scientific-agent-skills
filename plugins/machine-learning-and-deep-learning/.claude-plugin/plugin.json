@@ -5,11 +5,11 @@
   "skills": [
     "./skills/aeon",
     "./skills/cirq",
+    "./skills/pennylane",
     "./skills/pufferlib",
     "./skills/pymc",
     "./skills/pymoo",
     "./skills/pytorch-lightning",
-    "./skills/pennylane",
     "./skills/qiskit",
     "./skills/qutip",
     "./skills/scikit-learn",

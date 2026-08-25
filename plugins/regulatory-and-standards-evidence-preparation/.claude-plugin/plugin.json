@@ -3,6 +3,7 @@
   "description": "Regulatory & Standards Evidence Preparation (官方: Scientific Packages > Regulatory & Standards Evidence Preparation)",
   "version": "1.0.0",
   "skills": [
-    "./skills/iso-13485-certification"
+    "./skills/analytical-method-validation",
+    "./skills/iso-standards-readiness"
   ]
 }

@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "skills": [
     "./skills/bgpt-paper-search",
-    "./skills/pyzotero",
     "./skills/citation-management",
     "./skills/generate-image",
     "./skills/infographics",
     "./skills/latex-posters",
     "./skills/market-research-reports",
     "./skills/pptx-posters",
+    "./skills/pyzotero",
     "./skills/scientific-schematics",
     "./skills/scientific-slides",
     "./skills/venue-templates"

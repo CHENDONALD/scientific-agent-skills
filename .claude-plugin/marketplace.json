@@ -5,8 +5,8 @@
     "url": "https://github.com/CHENDONALD"
   },
   "metadata": {
-    "description": "Fork of K-Dense-AI/scientific-agent-skills. ALL 150 skills grouped into 33 plugins by the official docs/skills.md taxonomy, each physically isolated in plugins/<subcategory>/. Root skills/ removed — zero residual.",
-    "version": "5.0.0",
+    "description": "Fork of K-Dense-AI/scientific-agent-skills. ALL 163 skills grouped into 35 plugins by the official docs/skills.md taxonomy, each physically isolated in plugins/<subcategory>/. Root skills/ removed — zero residual.",
+    "version": "5.1.0",
     "homepage": "https://github.com/CHENDONALD/scientific-agent-skills"
   },
   "plugins": [
@@ -253,6 +253,17 @@
       ]
     },
     {
+      "name": "pharmacology-and-pharmacometrics",
+      "source": "./plugins/pharmacology-and-pharmacometrics",
+      "description": "Pharmacology & Pharmacometrics (官方: Scientific Packages > Pharmacology & Pharmacometrics)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "pharmacology-and-pharmacometrics"
+      ]
+    },
+    {
       "name": "phylogenetics-and-evolutionary-biology",
       "source": "./plugins/phylogenetics-and-evolutionary-biology",
       "description": "Phylogenetics & Evolutionary Biology (官方: Scientific Packages > Phylogenetics & Evolutionary Biology)",
@@ -261,6 +272,17 @@
       "keywords": [
         "official-taxonomy",
         "phylogenetics-and-evolutionary-biology"
+      ]
+    },
+    {
+      "name": "preclinical-research-and-animal-welfare",
+      "source": "./plugins/preclinical-research-and-animal-welfare",
+      "description": "Preclinical Research & Animal Welfare (官方: Scientific Packages > Preclinical Research & Animal Welfare)",
+      "version": "1.0.0",
+      "category": "science",
+      "keywords": [
+        "official-taxonomy",
+        "preclinical-research-and-animal-welfare"
       ]
     },
     {

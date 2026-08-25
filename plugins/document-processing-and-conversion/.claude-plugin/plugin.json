@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "skills": [
     "./skills/docx",
-    "./skills/markitdown",
     "./skills/liteparse",
     "./skills/markdown-mermaid-writing",
+    "./skills/markitdown",
     "./skills/pdf",
     "./skills/pptx",
     "./skills/xlsx"
