@@ -5,9 +5,11 @@
   "skills": [
     "./skills/database-lookup",
     "./skills/depmap",
+    "./skills/hugging-science",
     "./skills/imaging-data-commons",
+    "./skills/ncats-arax",
+    "./skills/ontology-term-resolution",
     "./skills/primekg",
-    "./skills/usfiscaldata",
-    "./skills/hugging-science"
+    "./skills/usfiscaldata"
   ]
 }

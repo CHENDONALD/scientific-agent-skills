@@ -1,0 +1,8 @@
+{
+  "name": "preclinical-research-and-animal-welfare",
+  "description": "Preclinical Research & Animal Welfare (官方: Scientific Packages > Preclinical Research & Animal Welfare)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/relsa-severity-assessment"
+  ]
+}

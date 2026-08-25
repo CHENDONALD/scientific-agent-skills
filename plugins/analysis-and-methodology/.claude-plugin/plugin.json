@@ -5,8 +5,8 @@
   "skills": [
     "./skills/experimental-design",
     "./skills/exploratory-data-analysis",
-    "./skills/hypothesis-generation",
     "./skills/hypogenic",
+    "./skills/hypothesis-generation",
     "./skills/literature-review",
     "./skills/peer-review",
     "./skills/scientific-brainstorming",
