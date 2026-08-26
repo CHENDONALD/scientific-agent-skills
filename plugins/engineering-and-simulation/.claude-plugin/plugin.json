@@ -1,7 +1,7 @@
 {
   "name": "engineering-and-simulation",
   "description": "Engineering & Simulation (官方: Scientific Packages > Engineering & Simulation)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/fluidsim",
     "./skills/lab-hardware-cad",

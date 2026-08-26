@@ -1,7 +1,7 @@
 {
   "name": "machine-learning-and-deep-learning",
   "description": "Machine Learning & Deep Learning (官方: Scientific Packages > Machine Learning & Deep Learning)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/aeon",
     "./skills/cirq",

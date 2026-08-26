@@ -25,7 +25,7 @@
       "name": "analysis-and-methodology",
       "source": "./plugins/analysis-and-methodology",
       "description": "Analysis & Methodology (官方: Scientific Thinking & Analysis > Analysis & Methodology)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -36,7 +36,7 @@
       "name": "autonomous-research-and-optimization-frameworks",
       "source": "./plugins/autonomous-research-and-optimization-frameworks",
       "description": "Autonomous Research & Optimization Frameworks (官方: Scientific Packages > Autonomous Research & Optimization Frameworks)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -91,7 +91,7 @@
       "name": "data-analysis-and-visualization",
       "source": "./plugins/data-analysis-and-visualization",
       "description": "Data Analysis & Visualization (官方: Scientific Packages > Data Analysis & Visualization)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -124,7 +124,7 @@
       "name": "document-processing-and-conversion",
       "source": "./plugins/document-processing-and-conversion",
       "description": "Document Processing & Conversion (官方: Scientific Packages > Document Processing & Conversion)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -146,7 +146,7 @@
       "name": "engineering-and-simulation",
       "source": "./plugins/engineering-and-simulation",
       "description": "Engineering & Simulation (官方: Scientific Packages > Engineering & Simulation)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -201,7 +201,7 @@
       "name": "machine-learning-and-deep-learning",
       "source": "./plugins/machine-learning-and-deep-learning",
       "description": "Machine Learning & Deep Learning (官方: Scientific Packages > Machine Learning & Deep Learning)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -333,7 +333,7 @@
       "name": "research-methodology-and-proposal-writing",
       "source": "./plugins/research-methodology-and-proposal-writing",
       "description": "Research Methodology & Proposal Writing (官方: Scientific Packages > Research Methodology & Proposal Writing)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -344,7 +344,7 @@
       "name": "scientific-communication-and-publishing",
       "source": "./plugins/scientific-communication-and-publishing",
       "description": "Scientific Communication & Publishing (官方: Scientific Packages > Scientific Communication & Publishing)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -355,7 +355,7 @@
       "name": "scientific-databases-and-data-access",
       "source": "./plugins/scientific-databases-and-data-access",
       "description": "Scientific Databases & Data Access (官方: Scientific Databases & Data Access > Scientific Databases & Data Access)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -366,7 +366,7 @@
       "name": "tool-discovery-and-computational-resources",
       "source": "./plugins/tool-discovery-and-computational-resources",
       "description": "Tool Discovery & Computational Resources (官方: Scientific Packages > Tool Discovery & Computational Resources)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
