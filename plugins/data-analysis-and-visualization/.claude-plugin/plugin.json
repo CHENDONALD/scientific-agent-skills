@@ -1,7 +1,7 @@
 {
   "name": "data-analysis-and-visualization",
   "description": "Data Analysis & Visualization (官方: Scientific Packages > Data Analysis & Visualization)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/dask",
     "./skills/geomaster",
