@@ -1,5 +1,5 @@
 ---
-name: xlsx
+name: xlsx-anthropic
 description: "Create, edit, analyze, or convert Excel spreadsheets (.xlsx, .xlsm, .xltx) where the workbook file is the primary deliverable. Use for formulas, formatting, financial models, multi-sheet workbooks, and tabular cleanup exported to Excel. Also applies to .csv/.tsv when the user wants spreadsheet output. Do NOT use for Word documents, HTML reports, standalone Python scripts, database pipelines, or Google Sheets API work."
 allowed-tools: Read Write Edit Bash Grep Glob
 license: Proprietary. LICENSE.txt has complete terms
