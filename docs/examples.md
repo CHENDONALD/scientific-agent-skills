@@ -4,7 +4,7 @@ Worked, interdisciplinary examples showing how the skills in this repository com
 end-to-end research workflows. Every skill in `skills/` appears in at least one example, and
 every skill named in an example exists in the directory.
 
-**Coverage reviewed:** 2026-09-13 against all 165 current skills. The
+**Coverage reviewed:** 2026-09-13 against all 166 current skills. The
 [skill catalog](skills.md) links to each source workflow. These are illustrative
 research prompts, not records of completed studies or validated analysis results.
 
@@ -3766,6 +3766,7 @@ plausible in the relevant tissue.
 - `genomic-coordinates` - Build, chr-prefix, and variant-representation hygiene across every source
 - `onekgpd` - 1000 Genomes individual-level genotypes, LD context, and population allele frequencies
 - `genomic-intelligence` - Hosted DNA language models for promoter, splice, enhancer, chromatin-state, and sequence-to-expression prediction
+- `alphagenome` - AlphaGenome Atlas AVI scores, Phred ranks, and feature attributions for every hg38 SNV in the credible set, per-tissue Atlas track scores, and on-demand model scoring for indels
 - `transformers` - Run or fine-tune sequence models locally when the hosted API is not appropriate
 - `deeptools` - Coverage tracks, matrices, and heatmaps over ATAC/ChIP/DNase signal
 - `geniml` - Genomic interval embeddings and region-set similarity
@@ -3780,9 +3781,9 @@ plausible in the relevant tissue.
 **Starting prompt**:
 
 ```text
-Use the genomic-coordinates, onekgpd, genomic-intelligence, deeptools,
-polars-bio, database-lookup, ontology-term-resolution, statistical-analysis,
-and scientific-writing skills.
+Use the genomic-coordinates, onekgpd, alphagenome, genomic-intelligence,
+deeptools, polars-bio, database-lookup, ontology-term-resolution,
+statistical-analysis, and scientific-writing skills.
 
 Goal: for this locus, a ranked credible set of candidate causal variants, each
 with a proposed mechanism and the single experiment that would falsify it.
@@ -3831,6 +3832,15 @@ Step 3: Match the tissue before looking at any functional data
   different question, and mixing the two is the most common failure in this analysis
 
 Step 4: Predict regulatory consequence from sequence
+- Start with the AlphaGenome Atlas through the alphagenome skill: every hg38 SNV in the
+  credible set already has an AVI score, a genome-wide Phred rank, and 18 feature
+  attributions that say whether the score comes from splicing, TF binding,
+  accessibility, or conservation alone. Rank the set by Phred rather than applying one
+  hard cut-off; pathogenic regulatory variants sit in lower AVI bins than coding ones
+- Then pull the Atlas RNA_SEQ, DNASE, and CHIP_TF track scores for the ontology-matched
+  tissue from Step 3, not the genome-wide maximum. Indels and swapped REF alleles are
+  not in the Atlas: score those on demand with the AlphaGenome model, and link every
+  reported variant to the Atlas website so a reviewer can inspect the REF and ALT tracks
 - Read genomic-intelligence's current task schemas before extracting paired reference
   and alternate windows. Preserve the assembly, coordinates, strand, and REF check
 - Select only models appropriate for the organism and question: the hosted DeepSTARR

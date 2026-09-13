@@ -1,6 +1,6 @@
 # Scientific Skills
 
-All **165 skills** in this checkout, grouped by domain. Summaries mirror each skill's
+All **166 skills** in this checkout, grouped by domain. Summaries mirror each skill's
 current `description`; open its linked `SKILL.md` for setup, tested versions, workflows,
 and limitations. See [workflow examples](examples.md) for ways to combine them.
 
@@ -49,6 +49,7 @@ and limitations. See [workflow examples](examples.md) for ways to combine them.
 ## Scientific Packages
 
 ### Bioinformatics & Genomics
+- **[AlphaGenome](../skills/alphagenome/SKILL.md)** - Look up precomputed AlphaGenome Atlas effects for any GRCh38 single-nucleotide variant (AVI score with Phred and 18 SHAP feature attributions, plus raw and quantile scores for RNA-seq, DNase, ATAC, ChIP-TF, ChIP-histone, CAGE, PRO-cap, splicing, polyadenylation and contact-map tracks), score variants or scan windows on demand with the AlphaGenome model for human and mouse (variant scoring, in silico mutagenesis, REF-versus-ALT track prediction), and build Atlas website deep links. Use when the user mentions AlphaGenome, AlphaGenome Atlas, AVI or AlphaGenome Variant Impact, DeepMind variant effect prediction, or wants to prioritise or mechanistically interpret non-coding, regulatory, splicing, enhancer, promoter, or chromatin-accessibility effects of SNVs from a VCF, credible set, or region. Research use only; not a clinical tool.
 - **[AnnData](../skills/anndata/SKILL.md)** - Data structure for annotated matrices in single-cell analysis. Use when working with .h5ad files or integrating with the scverse ecosystem. This is the data format skill—for analysis workflows use scanpy; for probabilistic models use scvi-tools; for population-scale queries use cellxgene-census.
 - **[Arboreto](../skills/arboreto/SKILL.md)** - Infer gene regulatory networks (GRNs) from gene expression data using scalable algorithms (GRNBoost2, GENIE3). Use when analyzing transcriptomics data (bulk RNA-seq, single-cell RNA-seq) to identify transcription factor-target gene relationships and regulatory interactions. Supports distributed computation for large-scale datasets.
 - **[Biopython](../skills/biopython/SKILL.md)** - Comprehensive molecular biology toolkit. Use for sequence manipulation, file parsing (FASTA/GenBank/PDB), phylogenetics, and programmatic NCBI/PubMed access (Bio.Entrez). Best for batch processing, custom bioinformatics pipelines, BLAST automation. For quick lookups use gget; for multi-service integration use bioservices.
