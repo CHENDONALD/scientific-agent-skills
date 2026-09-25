@@ -1,10 +1,11 @@
 {
   "name": "scientific-databases-and-data-access",
   "description": "Scientific Databases & Data Access (官方: Scientific Databases & Data Access > Scientific Databases & Data Access)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "skills": [
     "./skills/database-lookup",
     "./skills/depmap",
+    "./skills/folklore-variant-evidence",
     "./skills/hugging-science",
     "./skills/imaging-data-commons",
     "./skills/ncats-arax",
