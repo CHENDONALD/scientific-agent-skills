@@ -697,6 +697,12 @@ packages = ["openpiv", "numpy", "scipy", "scikit-image", "matplotlib"]
 python = "3.12"
 packages = ["build123d", "matplotlib"]
 
+[skills.fictiv]
+# check_cad_file.py is standard library only; the STEP fixtures are committed
+# build123d exports, so the suite needs no CAD kernel. The browser scripts are
+# syntax-checked with node when it is on PATH.
+packages = []
+
 # --- geospatial -----------------------------------------------------------
 
 [skills.geopandas]
