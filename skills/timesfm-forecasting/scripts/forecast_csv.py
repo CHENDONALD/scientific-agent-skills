@@ -131,11 +131,11 @@ def forecast_series(
     for i, col in enumerate(value_cols):
         results[col] = {
             "forecast": point[i].tolist(),
-            "lower_90": quantiles[i, :, 1].tolist(),  # 10th percentile
-            "lower_80": quantiles[i, :, 2].tolist(),  # 20th percentile
+            "lower_80": quantiles[i, :, 1].tolist(),  # 10th percentile
+            "lower_60": quantiles[i, :, 2].tolist(),  # 20th percentile
             "median": quantiles[i, :, 5].tolist(),  # 50th percentile
-            "upper_80": quantiles[i, :, 8].tolist(),  # 80th percentile
-            "upper_90": quantiles[i, :, 9].tolist(),  # 90th percentile
+            "upper_60": quantiles[i, :, 8].tolist(),  # 80th percentile
+            "upper_80": quantiles[i, :, 9].tolist(),  # 90th percentile
         }
 
     return results
@@ -169,11 +169,11 @@ def write_csv_output(
                 "series": col,
                 "step": h + 1,
                 "forecast": data["forecast"][h],
-                "lower_90": data["lower_90"][h],
                 "lower_80": data["lower_80"][h],
+                "lower_60": data["lower_60"][h],
                 "median": data["median"][h],
+                "upper_60": data["upper_60"][h],
                 "upper_80": data["upper_80"][h],
-                "upper_90": data["upper_90"][h],
             }
             if isinstance(future_dates[0], (pd.Timestamp,)):
                 row["date"] = future_dates[h]

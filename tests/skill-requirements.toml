@@ -685,7 +685,7 @@ packages = [
 ]
 
 [skills.qutip]
-packages = ["qutip", "qutip-qip", "qutip-qtrl", "qutip-jax", "matplotlib", "numpy"]
+packages = ["qutip==5.3.0", "qutip-qip==0.4.2", "qutip-qtrl==0.2.0", "qutip-jax==0.1.1", "matplotlib", "numpy"]
 
 # --- physics, astronomy, and simulation -----------------------------------
 
@@ -716,7 +716,18 @@ packages = []
 # --- geospatial -----------------------------------------------------------
 
 [skills.geopandas]
-packages = ["geopandas", "pyogrio", "pyproj", "shapely", "pyarrow", "matplotlib", "sqlalchemy"]
+packages = [
+    "geopandas==1.1.4",
+    "numpy==2.5.1",
+    "packaging==26.2",
+    "pandas==3.0.5",
+    "pyarrow==25.0.0",
+    "pyogrio==0.13.0",
+    "pyproj==3.7.2",
+    "shapely==2.1.2",
+    "matplotlib",
+    "sqlalchemy",
+]
 
 [skills.geomaster]
 packages = [

@@ -86,6 +86,7 @@ def get_kegg_info(kegg, kegg_id):
             'exact_mass': None,
             'mol_weight': None,
             'chebi_id': None,
+            'chebi_ids': [],
             'pathways': []
         }
 
@@ -114,7 +115,9 @@ def get_kegg_info(kegg, kegg_id):
             elif "ChEBI:" in line:
                 parts = line.split("ChEBI:")
                 if len(parts) > 1:
-                    compound_info['chebi_id'] = parts[1].strip().split()[0]
+                    for identifier in parts[1].strip().split():
+                        if identifier not in compound_info['chebi_ids']:
+                            compound_info['chebi_ids'].append(identifier)
 
             elif line.startswith("PATHWAY"):
                 current_section = "pathway"
@@ -129,6 +132,14 @@ def get_kegg_info(kegg, kegg_id):
 
             elif line.startswith(" ") and not line.startswith("            "):
                 current_section = None
+
+        # A KEGG entry can link distinct protonation or structural forms.
+        # Preserve every candidate; the legacy singular field is unique only.
+        if len(compound_info['chebi_ids']) == 1:
+            compound_info['chebi_id'] = compound_info['chebi_ids'][0]
+        elif compound_info['chebi_ids']:
+            print("⊘ Multiple ChEBI cross-references; review structures before mapping: "
+                  + ", ".join(compound_info['chebi_ids']))
 
         # Display information
         print(f"\n✓ KEGG Compound Information:")
@@ -151,29 +162,39 @@ def get_kegg_info(kegg, kegg_id):
         return None
 
 
-def get_chembl_id(kegg_id):
-    """Map KEGG ID to ChEMBL via UniChem."""
+def get_chembl_id(kegg_id, chebi_id=None):
+    """Resolve a KEGG entry's ChEBI cross-reference with UniChem 2.
+
+    KEGG is not a supported UniChem 2 source. Preserve the original KEGG ID
+    for provenance and use only the ChEBI ID recorded in that KEGG entry.
+    """
     print(f"\n{'='*70}")
     print("STEP 3: ChEMBL Mapping (via UniChem)")
     print(f"{'='*70}")
-
-    try:
-        u = UniChem()
-
-        print(f"Mapping KEGG:{kegg_id} to ChEMBL...")
-
-        chembl_id = u.get_compound_id_from_kegg(kegg_id)
-
-        if chembl_id:
-            print(f"✓ ChEMBL ID: {chembl_id}")
-            return chembl_id
-        else:
-            print("✗ No ChEMBL mapping found")
-            return None
-
-    except Exception as e:
-        print(f"✗ Error: {e}")
+    if not chebi_id:
+        print(f"⊘ KEGG:{kegg_id} has no unique ChEBI cross-reference; mapping unavailable")
         return None
+    chebi_id = str(chebi_id)
+    if not chebi_id.startswith("CHEBI:"):
+        chebi_id = f"CHEBI:{chebi_id}"
+    try:
+        response = UniChem().get_compounds(chebi_id, "chebi")
+        identifiers = sorted({
+            source["compoundId"]
+            for match in response.get("compounds", [])
+            for source in match.get("sources", [])
+            if source.get("shortName") == "chembl" and source.get("compoundId")
+        })
+        if len(identifiers) == 1:
+            print(f"✓ {chebi_id} → ChEMBL ID: {identifiers[0]}")
+            return identifiers[0]
+        if identifiers:
+            print(f"⊘ Ambiguous ChEMBL mappings: {', '.join(identifiers)}; review structures")
+        else:
+            print("⊘ No ChEMBL mapping returned; this does not prove absence")
+    except Exception as error:
+        print(f"✗ UniChem lookup failed: {error}")
+    return None
 
 
 def get_chebi_info(chebi_id):
@@ -314,6 +335,9 @@ def save_results(compound_name, kegg_info, chembl_id, output_file):
             f.write(f"KEGG: {kegg_info['kegg_id']}\n")
             if kegg_info['chebi_id']:
                 f.write(f"ChEBI: {kegg_info['chebi_id']}\n")
+            elif kegg_info.get('chebi_ids'):
+                f.write("ChEBI candidates (unresolved): "
+                        + ", ".join(kegg_info['chebi_ids']) + "\n")
         if chembl_id:
             f.write(f"ChEMBL: {chembl_id}\n")
         f.write("\n")
@@ -353,7 +377,7 @@ Examples:
     kegg_info = get_kegg_info(kegg, kegg_id)
 
     # Step 3: Map to ChEMBL
-    chembl_id = get_chembl_id(kegg_id)
+    chembl_id = get_chembl_id(kegg_id, (kegg_info or {}).get("chebi_id"))
 
     # Step 4: Get ChEBI details
     chebi_info = None
