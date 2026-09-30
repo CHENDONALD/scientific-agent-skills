@@ -908,6 +908,31 @@ class TestInputHandling(unittest.TestCase):
         self.assertEqual(res.returncode, 2)
         self.assertIn("not numeric", res.stderr)
 
+    def test_ragged_csv_and_tsv_name_the_data_row(self):
+        for delimiter, suffix in ((",", ".csv"), ("\t", ".tsv")):
+            with self.subTest(suffix=suffix):
+                text = delimiter.join(("level", "response")) + "\n"
+                text += delimiter.join(("50", "10100")) + "\n"
+                text += delimiter.join(("100", "20100", "extra")) + "\n"
+                with self.assertRaisesRegex(
+                    common.InputError, "row 2: more fields than the header"
+                ):
+                    common.parse_rows(text, path_hint="calibration" + suffix)
+
+    def test_ragged_and_short_rows_are_cli_input_errors(self):
+        for row, message in (("100,20100,extra", "more fields than the header"),
+                             ("100", "not numeric")):
+            with self.subTest(row=row):
+                res = subprocess.run(
+                    [sys.executable, str(SCRIPTS_DIR / "check_response.py"), "-i", "-"],
+                    input="level,response\n50,10100\n" + row + "\n",
+                    capture_output=True, text=True, check=False,
+                )
+                self.assertEqual(res.returncode, 2, res.stderr)
+                self.assertIn(message, res.stderr)
+                self.assertNotIn("Traceback", res.stderr)
+                self.assertEqual(res.stdout, "")
+
     def test_missing_file_exits_2(self):
         res = run_script("check_response", "-i", str(FIXTURES / "does_not_exist.csv"))
         self.assertEqual(res.returncode, 2)

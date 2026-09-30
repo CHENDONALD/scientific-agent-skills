@@ -843,6 +843,11 @@ def parse_rows(text: str, path_hint: str | None = None) -> list[dict[str, str]]:
     for i, row in enumerate(reader):
         if i >= MAX_ROWS:
             raise InputError(f"more than {MAX_ROWS} rows")
+        # DictReader stores surplus fields as a list under its None restkey.
+        if None in row:
+            raise InputError(
+                f"row {i + 1}: more fields than the header ({len(row[None])} extra)"
+            )
         rows.append({(k or "").strip(): (v or "").strip() for k, v in row.items()})
     if not rows:
         raise InputError("no data rows found")
