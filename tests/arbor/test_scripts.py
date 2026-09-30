@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import io
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -446,6 +447,31 @@ class ValidateTests(ArborRunTestCase):
 
 
 class ProjectionTests(ArborRunTestCase):
+    def test_each_observe_list_uses_numeric_node_order(self) -> None:
+        self.init()
+        ids = [f"n{i}" for i in range(1, 13)]
+        for nid in ids:
+            self.run_command("add-node", "--parent", "n0", "--hypothesis", f"idea {nid}")
+        for status in ("running", "executed", "pruned"):
+            with self.subTest(status=status):
+                for nid in ids:
+                    self.run_command("set-status", "--node", nid, "--status", status)
+                before = self.tree
+                out, _ = self.run_command("observe")
+                self.assertEqual(re.findall(r"^\s+(n\d+)\b", out, re.MULTILINE), ids)
+                self.assertEqual(self.tree, before)
+
+    def test_status_preserves_depth_first_order_with_numeric_siblings(self) -> None:
+        self.init()
+        for i in range(11):
+            self.run_command("add-node", "--parent", "n0", "--hypothesis", f"idea {i}")
+        self.run_command("add-node", "--parent", "n2", "--hypothesis", "nested idea")
+        before = self.tree
+        out, _ = self.run_command("status")
+        ids = re.findall(r"^\s*\[.\] (n\d+)\b", out, re.MULTILINE)
+        self.assertEqual(ids, ["n0", "n1", "n2", "n12", *[f"n{i}" for i in range(3, 12)]])
+        self.assertEqual(self.tree, before)
+
     def test_observe_reports_the_objective_and_every_node(self) -> None:
         self.init(objective="Reduce inference latency")
         self.run_command("add-node", "--parent", "n0", "--hypothesis", "quantise weights")
