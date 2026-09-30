@@ -24,7 +24,8 @@ def check_file_exists(filepath):
 def check_bam_index(bam_file):
     """Check if BAM file has an index (.bai or .bam.bai)."""
     bai_file1 = bam_file + ".bai"
-    bai_file2 = bam_file.replace(".bam", ".bai")
+    # Preserve parent directories and any earlier .bam in the filename.
+    bai_file2 = str(Path(bam_file).with_suffix(".bai"))
 
     if os.path.exists(bai_file1):
         return True, f"✓ BAM index found: {bai_file1}"

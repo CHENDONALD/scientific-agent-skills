@@ -236,6 +236,23 @@ class FileValidationTests(unittest.TestCase):
             ok, _ = validate_files.check_bam_index(str(bam))
             self.assertTrue(ok)
 
+    def test_bam_index_lookup_only_replaces_the_final_suffix(self) -> None:
+        for name in ("sample.bam", "sample.bam.bam"):
+            for append in (False, True):
+                with self.subTest(name=name, append=append):
+                    with tempfile.TemporaryDirectory() as directory:
+                        stage = Path(directory) / "align.bam"
+                        stage.mkdir()
+                        bam = stage / name
+                        bam.write_bytes(b"BAM\1")
+                        ok, _ = validate_files.check_bam_index(str(bam))
+                        self.assertFalse(ok)
+                        index = Path(str(bam) + ".bai") if append else bam.with_suffix(".bai")
+                        index.write_bytes(b"BAI\1")
+                        ok, message = validate_files.check_bam_index(str(bam))
+                        self.assertTrue(ok, message)
+                        self.assertIn(str(index), message)
+
     def test_tiny_bigwig_is_flagged_as_suspicious(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             small = Path(directory) / "small.bw"
