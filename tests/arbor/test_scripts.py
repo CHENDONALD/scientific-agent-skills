@@ -202,6 +202,30 @@ class EvidenceTests(ArborRunTestCase):
         )
         self.assertEqual(self.tree["nodes"]["n2"]["status"], "pruned")
 
+    def test_invalid_evidence_status_leaves_all_persisted_state_unchanged(self) -> None:
+        self.run_command("set-evidence", "--node", "n2", "--dev-score", "0.4",
+                         "--result", "original result")
+        state_path = self.run_dir / ".arbor" / "tree.json"
+        before = state_path.read_bytes()
+        for status in ("inprogress", ""):
+            with self.subTest(status=status):
+                with self.assertRaisesRegex(SystemExit, "status must be one of"):
+                    self.run_command(
+                        "set-evidence", "--node", "n2", "--dev-score", "0.9",
+                        "--result", "replacement", "--insight", "new lesson",
+                        "--branch-ref", "new-branch", "--status", status,
+                    )
+                self.assertEqual(state_path.read_bytes(), before)
+        out, _ = self.run_command("observe")
+        self.assertIn("n2 [executed]", out)
+        self.run_command("validate")
+
+    def test_set_evidence_accepts_every_supported_status(self) -> None:
+        for status in sorted(arbor_tree.VALID_STATUS):
+            with self.subTest(status=status):
+                self.run_command("set-evidence", "--node", "n2", "--status", status)
+                self.assertEqual(self.tree["nodes"]["n2"]["status"], status)
+
     def test_a_partial_update_leaves_untouched_fields_alone(self) -> None:
         self.run_command(
             "set-evidence",
