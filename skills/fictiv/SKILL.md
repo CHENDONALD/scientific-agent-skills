@@ -4,7 +4,7 @@ description: Operate Fictiv (app.fictiv.com), the on-demand manufacturing platfo
 license: MIT
 compatibility: Needs a browser-automation tool with JavaScript execution (e.g. Claude in Chrome) and the user's logged-in Fictiv account at app.fictiv.com; there is no public API. The CAD pre-flight script needs Python 3.10+ (standard library only). UI mapped live in September 2026.
 metadata:
-  version: "1.1"
+  version: "1.2"
   skill-author: K-Dense Inc.
 ---
 

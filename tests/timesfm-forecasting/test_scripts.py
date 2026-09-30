@@ -347,6 +347,22 @@ class ReportTests(unittest.TestCase):
         self.assertIn("ready", report.verdict)
         self.assertIn(str(report.recommended_batch_size), report.verdict_detail)
 
+    def test_reports_print_on_cp1252_for_success_warning_and_failure(self) -> None:
+        for total_ram in (1.0, 32.0):
+            with self.subTest(total_ram=total_ram):
+                report = self.run_checks(
+                    total_ram=total_ram, modules={"torch": None, "timesfm": None}
+                )
+                raw = io.BytesIO()
+                with io.TextIOWrapper(raw, encoding="cp1252", errors="strict") as stream:
+                    with contextlib.redirect_stdout(stream):
+                        check_system.print_report(report)
+                    stream.flush()
+                    output = raw.getvalue().decode("cp1252")
+                    self.assertIn("VERDICT", output)
+                    self.assertIn("WARN", output)
+                    self.assertIn("ready" if report.passed else "does NOT meet", output)
+
     def test_a_cuda_host_is_reported_in_gpu_mode(self) -> None:
         report = self.run_checks(modules={"torch": GpuCheckTests.torch_module(cuda=True)})
         self.assertEqual(report.mode, "gpu")

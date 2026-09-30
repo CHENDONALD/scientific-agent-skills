@@ -5,7 +5,7 @@ license: Apache-2.0
 allowed-tools: Read Write Edit Bash
 compatibility: Python 3.10+. Optional LibreOffice (Office formats) and ImageMagick (images). Bundled Tesseract for OCR. All processing is local — no cloud API required.
 metadata:
-  version: "1.3"
+  version: "1.4"
   skill-author: K-Dense Inc.
 ---
 

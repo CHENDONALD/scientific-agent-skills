@@ -38,7 +38,7 @@ def run_preflight() -> dict:
 
     report = run_checks("v2.5")
     if not report.passed:
-        print("\n🛑 System check FAILED. Cannot proceed with forecasting.")
+        print("\n[ERROR] System check FAILED. Cannot proceed with forecasting.")
         print(f"   {report.verdict_detail}")
         print("\nRun 'python scripts/check_system.py' for details.")
         sys.exit(1)
@@ -91,14 +91,14 @@ def load_csv(
     if date_col and date_col in df.columns:
         df[date_col] = pd.to_datetime(df[date_col])
     elif date_col:
-        print(f"⚠️ Date column '{date_col}' not found. Available: {list(df.columns)}")
+        print(f"[WARN] Date column '{date_col}' not found. Available: {list(df.columns)}")
         date_col = None
 
     # Identify value columns
     if value_cols:
         missing = [c for c in value_cols if c not in df.columns]
         if missing:
-            print(f"⚠️ Columns not found: {missing}. Available: {list(df.columns)}")
+            print(f"[WARN] Columns not found: {missing}. Available: {list(df.columns)}")
             value_cols = [c for c in value_cols if c in df.columns]
     else:
         # Auto-detect numeric columns (exclude date)
@@ -108,7 +108,7 @@ def load_csv(
         value_cols = numeric_cols
 
     if not value_cols:
-        print("🛑 No numeric columns found to forecast.")
+        print("[ERROR] No numeric columns found to forecast.")
         sys.exit(1)
 
     print(f"Found {len(value_cols)} series to forecast: {value_cols}")
@@ -181,14 +181,14 @@ def write_csv_output(
 
     out_df = pd.DataFrame(rows)
     out_df.to_csv(output_path, index=False)
-    print(f"✅ Wrote {len(rows)} forecast rows to {output_path}")
+    print(f"[OK] Wrote {len(rows)} forecast rows to {output_path}")
 
 
 def write_json_output(results: dict[str, dict], output_path: str) -> None:
     """Write forecast results to JSON."""
     with open(output_path, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"✅ Wrote forecasts for {len(results)} series to {output_path}")
+    print(f"[OK] Wrote forecasts for {len(results)} series to {output_path}")
 
 
 def main() -> None:
@@ -244,7 +244,7 @@ def main() -> None:
         report = run_preflight()
         batch_size = args.batch_size or report.get("recommended_batch_size", 32)
     else:
-        print("⚠️ Skipping system check (--skip-check). Proceed with caution.")
+        print("[WARN] Skipping system check (--skip-check). Proceed with caution.")
         batch_size = args.batch_size or 32
 
     # 2. Load model
@@ -262,7 +262,7 @@ def main() -> None:
     else:
         write_csv_output(results, args.output, df, date_col, args.horizon)
 
-    print("\nDone! 🎉")
+    print("\nDone! [OK]")
 
 
 if __name__ == "__main__":

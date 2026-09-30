@@ -5,7 +5,7 @@ allowed-tools: Read Write Edit Bash
 compatibility: Requires Python 3.12+ and PyMC 6.0.1-compatible dependencies. Install reproducible environments with `uv pip install "pymc[nutpie]==6.0.1"`; optional NumPyro or BlackJAX samplers require separately pinned JAX-compatible dependencies.
 license: Apache License, Version 2.0
 metadata:
-  version: "1.5"
+  version: "1.6"
   skill-author: K-Dense Inc.
 ---
 
