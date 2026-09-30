@@ -829,7 +829,11 @@ def parse_rows(text: str, path_hint: str | None = None) -> list[dict[str, str]]:
         for item in payload:
             if not isinstance(item, dict):
                 raise InputError("JSON rows must be objects")
-            rows.append({str(k): "" if v is None else str(v) for k, v in item.items()})
+            # Match CSV/TSV whitespace handling while retaining null as empty.
+            rows.append({
+                str(k).strip(): "" if v is None else str(v).strip()
+                for k, v in item.items()
+            })
         if not rows:
             raise InputError("no data rows found")
         return rows

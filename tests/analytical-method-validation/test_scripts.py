@@ -893,6 +893,33 @@ class TestCompareMethods(unittest.TestCase):
 
 
 class TestInputHandling(unittest.TestCase):
+    def test_json_csv_and_tsv_normalize_the_same_record(self):
+        record = {" level ": 0, " response ": " 10100 ", " sample ": " sample A ", " note ": None}
+        expected = [{"level": "0", "response": "10100", "sample": "sample A", "note": ""}]
+        for payload in ([record], {"rows": [record]}, {"data": [record]}):
+            with self.subTest(payload=payload):
+                rows = common.parse_rows(json.dumps(payload))
+                self.assertEqual(rows, expected)
+                common.require_columns(rows, ["level", "response"])
+        for delimiter in (",", "\t"):
+            with self.subTest(delimiter=delimiter):
+                text = delimiter.join(record) + "\n"
+                text += delimiter.join(("0", " 10100 ", " sample A ", "")) + "\n"
+                self.assertEqual(common.parse_rows(text), expected)
+
+    def test_padded_json_produces_the_same_analysis_as_csv(self):
+        rows = common.parse_rows((FIXTURES / "calibration_good.csv").read_text())
+        padded = [{f" {key} ": f" {value} " for key, value in row.items()} for row in rows]
+        result = subprocess.run(
+            [sys.executable, str(SCRIPTS_DIR / "check_response.py"), "-i", "-", "--format", "json"],
+            input=json.dumps(padded), capture_output=True, text=True, check=False,
+        )
+        baseline = run_script("check_response", "-i", str(FIXTURES / "calibration_good.csv"),
+                              "--format", "json")
+        self.assertEqual(baseline.returncode, 0, baseline.stderr)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(result.stdout), json.loads(baseline.stdout))
+
     def test_json_input_accepted(self):
         res = run_script("check_response", "-i", str(FIXTURES / "calibration_good.json"),
                          "--format", "json")
