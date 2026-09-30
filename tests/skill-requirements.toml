@@ -722,6 +722,12 @@ packages = ["build123d", "matplotlib"]
 # syntax-checked with node when it is on PATH.
 packages = []
 
+# --- chemical oceanography ------------------------------------------------
+
+[skills.marine-carbonate-chemistry]
+python = "3.13"
+packages = ["PyCO2SYS==1.8.3.4", "numpy==2.5.1"]
+
 # --- geospatial -----------------------------------------------------------
 
 [skills.geopandas]

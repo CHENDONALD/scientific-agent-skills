@@ -1,6 +1,6 @@
 # Scientific Skills
 
-This checkout contains **169 skills**. The catalog below groups skills by domain. Summaries mirror each skill's
+This checkout contains **171 skills**. The catalog below groups skills by domain. Summaries mirror each skill's
 current `description`; open its linked `SKILL.md` for setup, tested versions, workflows,
 and limitations. See [workflow examples](examples.md) for ways to combine them.
 
@@ -149,6 +149,10 @@ and limitations. See [workflow examples](examples.md) for ways to combine them.
 - **[Torch Geometric](../skills/torch-geometric/SKILL.md)** - PyTorch Geometric (PyG) for graph neural networks — node/link/graph classification, message passing (GCN, GAT, GraphSAGE, GIN), heterogeneous graphs, neighbor sampling, and custom datasets. Use when working with torch_geometric, not for general NetworkX analytics or non-graph PyTorch models.
 - **[Transformers](../skills/transformers/SKILL.md)** - Hugging Face Transformers for loading Hub models, running pipeline inference, text generation, and Trainer fine-tuning on NLP, vision, audio, and multimodal tasks. Use when working with AutoModel, pipelines, tokenizers, or TrainingArguments—not for general ML outside the Transformers library.
 - **[UMAP-learn](../skills/umap-learn/SKILL.md)** - Use UMAP-learn for nonlinear dimensionality reduction, 2D/3D embeddings, clustering preprocessing, supervised or semi-supervised UMAP, DensMAP, AlignedUMAP, and Parametric UMAP workflows.
+
+### Chemical Oceanography
+
+- **[Marine Carbonate Chemistry](../skills/marine-carbonate-chemistry/SKILL.md)** - Solves seawater carbonate chemistry with PyCO2SYS for chemical oceanography, ocean acidification, and marine carbon-cycle research. Use for paired total alkalinity, dissolved inorganic carbon, pH, or seawater pCO2/fCO2 measurements; carbonate speciation; aragonite and calcite saturation; Revelle factors; lab-to-in-situ temperature and pressure corrections; and measurement uncertainty propagation. Applies to carbonate-system calculations, not general aqueous speciation or air-sea gas-flux estimation.
 
 ### Materials Science & Chemistry
 - **[Astropy](../skills/astropy/SKILL.md)** - Core Python library for astronomy and astrophysics workflows that need Astropy APIs, including units/quantities, coordinates, FITS I/O, tables, time systems, WCS, and cosmology. Use when implementing or debugging astronomical data analysis code with Astropy.
