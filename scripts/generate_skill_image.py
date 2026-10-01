@@ -303,6 +303,11 @@ substantive judgments as an explicitly labelled human-review step when required 
 documentation, rather than an automatic pass gate. Put any essential limitation in the \
 quoted visible text inventory; an unquoted instruction to the renderer is not a caveat \
 the reader of the diagram will see.
+- Distinguish nonempty inputs or definitions from nonempty scientific results. For \
+gating workflows, say "strategy contains gate definitions", never "nonempty gates": \
+valid gated populations may contain no events. Preserve undefined percentages for \
+empty parent populations. Use plain-language labels when shortening an exact condition \
+would change which inputs or results are allowed.
 - Motifs must preserve the documented data flow as carefully as the step text. When \
 an artifact or processor is fitted on one dataset and reused on others, show one fitted \
 artifact with reuse connections; do not depict a separate fit for each dataset. Avoid \

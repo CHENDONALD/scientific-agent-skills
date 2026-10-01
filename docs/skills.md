@@ -2,7 +2,8 @@
 
 This checkout contains **181 skills**. The catalog below groups skills by domain. Summaries mirror each skill's
 current `description`; open its linked `SKILL.md` for setup, tested versions, workflows,
-and limitations. See [workflow examples](examples.md) for ways to combine them.
+and limitations. Browse the [illustrated skill guides](skill-guides/README.md) for
+scientist-facing explanations, or see [workflow examples](examples.md) for ways to combine them.
 
 **Catalog reviewed:** 2026-09-30.
 
