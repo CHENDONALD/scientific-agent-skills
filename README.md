@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 [![arXiv](https://img.shields.io/badge/arXiv-2609.00065-b31b1b.svg)](https://arxiv.org/abs/2609.00065)
-[![Version](https://img.shields.io/badge/Version-2.71.0-blue.svg)](pyproject.toml)
+[![Version](https://img.shields.io/badge/Version-2.72.0-blue.svg)](pyproject.toml)
 [![Skills](https://img.shields.io/badge/Skills-177-brightgreen.svg)](#-whats-included)
 [![Databases](https://img.shields.io/badge/Databases-100%2B-orange.svg)](#-whats-included)
 [![Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
@@ -88,6 +88,10 @@ This repository provides **177 scientific and research skills** organized into t
 
 Every skill has a `SKILL.md` with its purpose, workflow, and version metadata. Depending on the workflow, it also includes code examples, reference documentation, executable helpers, or templates. Skills with bundled `scripts/` have a corresponding test suite under `tests/<skill-name>/` and a dependency entry in [`tests/skill-requirements.toml`](tests/skill-requirements.toml).
 
+### What's new in 2.72.0
+
+The `docx`, `pdf`, `pptx`, and `xlsx` document skills, which were vendored from [anthropics/skills](https://github.com/anthropics/skills) under Anthropic's own license, are no longer bundled. The collection now has **177 skills**; install those four from Anthropic's repository if you rely on them. [Scientific Slides](skills/scientific-slides/SKILL.md) now builds PowerPoint decks with PptxGenJS or python-pptx and reviews them through LibreOffice and its own rendering and validation scripts.
+
 ### What's new in 2.71.0
 
 This update refreshes all **181 skills**, including package and API guidance, dependency requirements, reference documentation, and validation workflows. Highlights include:
@@ -114,7 +118,7 @@ Each skill records its own compatibility requirements and validation scope. Chec
 ## 📋 Table of Contents
 
 - [What's Included](#-whats-included)
-- [What's New in 2.71.0](#whats-new-in-2710)
+- [What's New in 2.72.0](#whats-new-in-2720)
 - [Recently Added Workflows](#recently-added-workflows)
 - [Why Use This?](#-why-use-this)
 - [Getting Started](#-getting-started)
