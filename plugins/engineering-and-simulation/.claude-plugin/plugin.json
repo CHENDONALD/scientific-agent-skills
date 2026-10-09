@@ -1,12 +1,13 @@
 {
   "name": "engineering-and-simulation",
   "description": "Engineering & Simulation (官方: Scientific Packages > Engineering & Simulation)",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "skills": [
     "./skills/fluidsim",
     "./skills/lab-hardware-cad",
     "./skills/matlab",
     "./skills/openpiv",
+    "./skills/pybamm",
     "./skills/simpy",
     "./skills/sympy"
   ]

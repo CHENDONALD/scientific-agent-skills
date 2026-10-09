@@ -1,10 +1,11 @@
 {
   "name": "materials-science-and-chemistry",
   "description": "Materials Science & Chemistry (官方: Scientific Packages > Materials Science & Chemistry)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/astropy",
     "./skills/cobrapy",
-    "./skills/pymatgen"
+    "./skills/pymatgen",
+    "./skills/tellurium"
   ]
 }

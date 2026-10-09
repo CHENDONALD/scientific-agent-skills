@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Fork of K-Dense-AI/scientific-agent-skills. ALL 166 skills grouped into 35 plugins by the official docs/skills.md taxonomy, each physically isolated in plugins/<subcategory>/. Root skills/ removed — zero residual.",
-    "version": "5.2.0",
+    "version": "5.3.0",
     "homepage": "https://github.com/CHENDONALD/scientific-agent-skills"
   },
   "plugins": [
@@ -47,7 +47,7 @@
       "name": "bioinformatics-and-genomics",
       "source": "./plugins/bioinformatics-and-genomics",
       "description": "Bioinformatics & Genomics (官方: Scientific Packages > Bioinformatics & Genomics)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -58,7 +58,7 @@
       "name": "cheminformatics-and-drug-discovery",
       "source": "./plugins/cheminformatics-and-drug-discovery",
       "description": "Cheminformatics & Drug Discovery (官方: Scientific Packages > Cheminformatics & Drug Discovery)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -146,7 +146,7 @@
       "name": "engineering-and-simulation",
       "source": "./plugins/engineering-and-simulation",
       "description": "Engineering & Simulation (官方: Scientific Packages > Engineering & Simulation)",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -212,7 +212,7 @@
       "name": "materials-science-and-chemistry",
       "source": "./plugins/materials-science-and-chemistry",
       "description": "Materials Science & Chemistry (官方: Scientific Packages > Materials Science & Chemistry)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -223,7 +223,7 @@
       "name": "medical-imaging-and-digital-pathology",
       "source": "./plugins/medical-imaging-and-digital-pathology",
       "description": "Medical Imaging & Digital Pathology (官方: Scientific Packages > Medical Imaging & Digital Pathology)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -245,7 +245,7 @@
       "name": "neuroscience-and-electrophysiology",
       "source": "./plugins/neuroscience-and-electrophysiology",
       "description": "Neuroscience & Electrophysiology (官方: Scientific Packages > Neuroscience & Electrophysiology)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
@@ -289,7 +289,7 @@
       "name": "protein-engineering-and-design",
       "source": "./plugins/protein-engineering-and-design",
       "description": "Protein Engineering & Design (官方: Scientific Packages > Protein Engineering & Design)",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "science",
       "keywords": [
         "official-taxonomy",
