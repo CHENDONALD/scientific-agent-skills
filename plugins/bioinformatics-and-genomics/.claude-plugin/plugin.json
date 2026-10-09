@@ -1,7 +1,7 @@
 {
   "name": "bioinformatics-and-genomics",
   "description": "Bioinformatics & Genomics (官方: Scientific Packages > Bioinformatics & Genomics)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/anndata",
     "./skills/arboreto",
@@ -22,6 +22,7 @@
     "./skills/polars-bio",
     "./skills/pydeseq2",
     "./skills/pysam",
+    "./skills/qiime2-amplicon",
     "./skills/scanpy",
     "./skills/scikit-bio",
     "./skills/scvelo",

@@ -1,12 +1,13 @@
 {
   "name": "protein-engineering-and-design",
   "description": "Protein Engineering & Design (官方: Scientific Packages > Protein Engineering & Design)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/adaptyv",
     "./skills/esm",
     "./skills/glycoengineering",
     "./skills/molecular-dynamics",
+    "./skills/relion",
     "./skills/tamarind"
   ]
 }

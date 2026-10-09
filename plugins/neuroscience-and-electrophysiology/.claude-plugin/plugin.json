@@ -1,10 +1,11 @@
 {
   "name": "neuroscience-and-electrophysiology",
   "description": "Neuroscience & Electrophysiology (官方: Scientific Packages > Neuroscience & Electrophysiology)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "skills": [
     "./skills/bids",
     "./skills/neurokit2",
-    "./skills/neuropixels-analysis"
+    "./skills/neuropixels-analysis",
+    "./skills/nwb-conversion"
   ]
 }
