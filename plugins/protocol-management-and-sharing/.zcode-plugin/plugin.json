@@ -1,0 +1,8 @@
+{
+  "name": "protocol-management-and-sharing",
+  "description": "Protocol Management & Sharing (官方: Scientific Integrations > Protocol Management & Sharing)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/protocolsio-integration"
+  ]
+}

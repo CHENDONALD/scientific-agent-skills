@@ -1,0 +1,10 @@
+{
+  "name": "data-management-and-infrastructure",
+  "description": "Data Management & Infrastructure (官方: Scientific Packages > Data Management & Infrastructure)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/lamindb",
+    "./skills/modal",
+    "./skills/optimize-for-gpu"
+  ]
+}
