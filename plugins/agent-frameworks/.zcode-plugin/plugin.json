@@ -1,0 +1,8 @@
+{
+  "name": "agent-frameworks",
+  "description": "Agent Frameworks (官方: Scientific Packages > Agent Frameworks)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/pi-agent"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "engineering-and-simulation",
+  "description": "Engineering & Simulation (官方: Scientific Packages > Engineering & Simulation)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/matlab",
+    "./skills/fluidsim",
+    "./skills/simpy",
+    "./skills/sympy"
+  ]
+}

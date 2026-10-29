@@ -1,0 +1,10 @@
+{
+  "name": "decision-and-scenario-analysis",
+  "description": "Decision & Scenario Analysis (官方: Scientific Thinking & Analysis > Decision & Scenario Analysis)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/consciousness-council",
+    "./skills/dhdna-profiler",
+    "./skills/what-if-oracle"
+  ]
+}

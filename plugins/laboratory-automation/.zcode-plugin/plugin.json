@@ -1,0 +1,9 @@
+{
+  "name": "laboratory-automation",
+  "description": "Laboratory Automation (官方: Scientific Integrations > Laboratory Automation)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/opentrons-integration",
+    "./skills/ginkgo-cloud-lab"
+  ]
+}

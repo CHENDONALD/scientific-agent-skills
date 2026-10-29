@@ -1,0 +1,14 @@
+{
+  "name": "document-processing-and-conversion",
+  "description": "Document Processing & Conversion (官方: Scientific Packages > Document Processing & Conversion)",
+  "version": "1.0.0",
+  "skills": [
+    "./skills/docx",
+    "./skills/markitdown",
+    "./skills/liteparse",
+    "./skills/markdown-mermaid-writing",
+    "./skills/pdf",
+    "./skills/pptx",
+    "./skills/xlsx"
+  ]
+}
