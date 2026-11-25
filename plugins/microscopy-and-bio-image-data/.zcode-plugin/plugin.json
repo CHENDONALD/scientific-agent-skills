@@ -1,7 +1,7 @@
 {
   "name": "microscopy-and-bio-image-data",
   "description": "Microscopy & Bio-image Data (官方: Scientific Integrations > Microscopy & Bio-image Data)",
-  "version": "1.0.0",
+  "version": "1.0.0-fork.1",
   "skills": [
     "./skills/omero-integration"
   ]

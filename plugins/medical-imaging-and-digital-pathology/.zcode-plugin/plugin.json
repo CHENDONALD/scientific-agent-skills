@@ -1,7 +1,7 @@
 {
   "name": "medical-imaging-and-digital-pathology",
   "description": "Medical Imaging & Digital Pathology (官方: Scientific Packages > Medical Imaging & Digital Pathology)",
-  "version": "1.0.0",
+  "version": "1.0.0-fork.1",
   "skills": [
     "./skills/histolab",
     "./skills/pathml",

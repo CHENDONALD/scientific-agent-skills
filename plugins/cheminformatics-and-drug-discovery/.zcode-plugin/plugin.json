@@ -1,7 +1,7 @@
 {
   "name": "cheminformatics-and-drug-discovery",
   "description": "Cheminformatics & Drug Discovery (官方: Scientific Packages > Cheminformatics & Drug Discovery)",
-  "version": "1.0.0",
+  "version": "1.0.0-fork.1",
   "skills": [
     "./skills/datamol",
     "./skills/deepchem",

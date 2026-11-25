@@ -1,7 +1,7 @@
 {
   "name": "healthcare-ai-and-clinical-machine-learning",
   "description": "Healthcare AI & Clinical Machine Learning (官方: Scientific Packages > Healthcare AI & Clinical Machine Learning)",
-  "version": "1.0.0",
+  "version": "1.0.0-fork.1",
   "skills": [
     "./skills/pyhealth"
   ]

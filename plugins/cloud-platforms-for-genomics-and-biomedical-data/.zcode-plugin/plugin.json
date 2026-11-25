@@ -1,7 +1,7 @@
 {
   "name": "cloud-platforms-for-genomics-and-biomedical-data",
   "description": "Cloud Platforms for Genomics & Biomedical Data (官方: Scientific Integrations > Cloud Platforms for Genomics & Biomedical Data)",
-  "version": "1.0.0",
+  "version": "1.0.0-fork.1",
   "skills": [
     "./skills/dnanexus-integration"
   ]

@@ -1,7 +1,7 @@
 {
   "name": "laboratory-information-management-systems-lims-and-randd-platforms",
   "description": "Laboratory Information Management Systems (LIMS) & R&D Platforms (官方: Scientific Integrations > Laboratory Information Management Systems (LIMS) & R&D Platforms)",
-  "version": "1.0.0",
+  "version": "1.0.0-fork.1",
   "skills": [
     "./skills/benchling-integration"
   ]
