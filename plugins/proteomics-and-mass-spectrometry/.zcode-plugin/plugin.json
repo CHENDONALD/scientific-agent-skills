@@ -1,9 +1,14 @@
 {
   "name": "proteomics-and-mass-spectrometry",
-  "description": "Proteomics & Mass Spectrometry (官方: Scientific Packages > Proteomics & Mass Spectrometry)",
-  "version": "1.0.0-fork.1",
+  "description": "Proteomics & Mass Spectrometry (\u5b98\u65b9: Scientific Packages > Proteomics & Mass Spectrometry)",
+  "version": "1.0.1",
   "skills": [
     "./skills/matchms",
     "./skills/pyopenms"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

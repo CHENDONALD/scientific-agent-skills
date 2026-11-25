@@ -1,8 +1,13 @@
 {
   "name": "autonomous-research-and-optimization-frameworks",
-  "description": "Autonomous Research & Optimization Frameworks (官方: Scientific Packages > Autonomous Research & Optimization Frameworks)",
-  "version": "1.1.0-fork.1",
+  "description": "Autonomous Research & Optimization Frameworks (\u5b98\u65b9: Scientific Packages > Autonomous Research & Optimization Frameworks)",
+  "version": "1.1.1",
   "skills": [
     "./skills/arbor"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

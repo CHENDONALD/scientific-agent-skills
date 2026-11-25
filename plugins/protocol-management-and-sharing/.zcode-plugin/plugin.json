@@ -1,8 +1,13 @@
 {
   "name": "protocol-management-and-sharing",
-  "description": "Protocol Management & Sharing (官方: Scientific Integrations > Protocol Management & Sharing)",
-  "version": "1.0.0-fork.1",
+  "description": "Protocol Management & Sharing (\u5b98\u65b9: Scientific Integrations > Protocol Management & Sharing)",
+  "version": "1.0.1",
   "skills": [
     "./skills/protocolsio-integration"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

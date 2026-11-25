@@ -1,7 +1,7 @@
 {
   "name": "cheminformatics-and-drug-discovery",
-  "description": "Cheminformatics & Drug Discovery (官方: Scientific Packages > Cheminformatics & Drug Discovery)",
-  "version": "1.0.0-fork.1",
+  "description": "Cheminformatics & Drug Discovery (\u5b98\u65b9: Scientific Packages > Cheminformatics & Drug Discovery)",
+  "version": "1.0.1",
   "skills": [
     "./skills/datamol",
     "./skills/deepchem",
@@ -12,5 +12,10 @@
     "./skills/rdkit",
     "./skills/rowan",
     "./skills/torchdrug"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

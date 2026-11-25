@@ -1,9 +1,14 @@
 {
   "name": "laboratory-automation",
-  "description": "Laboratory Automation (官方: Scientific Integrations > Laboratory Automation)",
-  "version": "1.0.0-fork.1",
+  "description": "Laboratory Automation (\u5b98\u65b9: Scientific Integrations > Laboratory Automation)",
+  "version": "1.0.1",
   "skills": [
     "./skills/opentrons-integration",
     "./skills/ginkgo-cloud-lab"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

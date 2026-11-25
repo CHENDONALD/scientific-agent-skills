@@ -1,8 +1,13 @@
 {
   "name": "cloud-platforms-for-genomics-and-biomedical-data",
-  "description": "Cloud Platforms for Genomics & Biomedical Data (官方: Scientific Integrations > Cloud Platforms for Genomics & Biomedical Data)",
-  "version": "1.0.0-fork.1",
+  "description": "Cloud Platforms for Genomics & Biomedical Data (\u5b98\u65b9: Scientific Integrations > Cloud Platforms for Genomics & Biomedical Data)",
+  "version": "1.0.1",
   "skills": [
     "./skills/dnanexus-integration"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

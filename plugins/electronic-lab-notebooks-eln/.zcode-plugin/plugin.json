@@ -1,9 +1,14 @@
 {
   "name": "electronic-lab-notebooks-eln",
-  "description": "Electronic Lab Notebooks (ELN) (官方: Scientific Integrations > Electronic Lab Notebooks (ELN))",
-  "version": "1.0.0-fork.1",
+  "description": "Electronic Lab Notebooks (ELN) (\u5b98\u65b9: Scientific Integrations > Electronic Lab Notebooks (ELN))",
+  "version": "1.0.1",
   "skills": [
     "./skills/labarchive-integration",
     "./skills/open-notebook"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "scientific-communication-and-publishing",
-  "description": "Scientific Communication & Publishing (官方: Scientific Packages > Scientific Communication & Publishing)",
-  "version": "1.2.0-fork.1",
+  "description": "Scientific Communication & Publishing (\u5b98\u65b9: Scientific Packages > Scientific Communication & Publishing)",
+  "version": "1.2.1",
   "skills": [
     "./skills/bgpt-paper-search",
     "./skills/pyzotero",
@@ -14,5 +14,10 @@
     "./skills/scientific-schematics",
     "./skills/scientific-slides",
     "./skills/venue-templates"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

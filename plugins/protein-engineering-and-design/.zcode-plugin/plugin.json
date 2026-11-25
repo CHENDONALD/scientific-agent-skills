@@ -1,12 +1,17 @@
 {
   "name": "protein-engineering-and-design",
-  "description": "Protein Engineering & Design (官方: Scientific Packages > Protein Engineering & Design)",
-  "version": "1.0.0-fork.1",
+  "description": "Protein Engineering & Design (\u5b98\u65b9: Scientific Packages > Protein Engineering & Design)",
+  "version": "1.0.1",
   "skills": [
     "./skills/adaptyv",
     "./skills/esm",
     "./skills/glycoengineering",
     "./skills/molecular-dynamics",
     "./skills/tamarind"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

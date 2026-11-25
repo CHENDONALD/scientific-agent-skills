@@ -1,7 +1,7 @@
 {
   "name": "scientific-databases-and-data-access",
-  "description": "Scientific Databases & Data Access (官方: Scientific Databases & Data Access > Scientific Databases & Data Access)",
-  "version": "1.2.0-fork.1",
+  "description": "Scientific Databases & Data Access (\u5b98\u65b9: Scientific Databases & Data Access > Scientific Databases & Data Access)",
+  "version": "1.2.1",
   "skills": [
     "./skills/database-lookup",
     "./skills/depmap",
@@ -9,5 +9,10 @@
     "./skills/primekg",
     "./skills/usfiscaldata",
     "./skills/hugging-science"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

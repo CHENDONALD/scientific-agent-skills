@@ -1,8 +1,13 @@
 {
   "name": "laboratory-automation-and-equipment-control",
-  "description": "Laboratory Automation & Equipment Control (官方: Scientific Packages > Laboratory Automation & Equipment Control)",
-  "version": "1.0.0-fork.1",
+  "description": "Laboratory Automation & Equipment Control (\u5b98\u65b9: Scientific Packages > Laboratory Automation & Equipment Control)",
+  "version": "1.0.1",
   "skills": [
     "./skills/pylabrobot"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

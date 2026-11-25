@@ -1,9 +1,14 @@
 {
   "name": "phylogenetics-and-evolutionary-biology",
-  "description": "Phylogenetics & Evolutionary Biology (官方: Scientific Packages > Phylogenetics & Evolutionary Biology)",
-  "version": "1.0.0-fork.1",
+  "description": "Phylogenetics & Evolutionary Biology (\u5b98\u65b9: Scientific Packages > Phylogenetics & Evolutionary Biology)",
+  "version": "1.0.1",
   "skills": [
     "./skills/etetoolkit",
     "./skills/phylogenetics"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

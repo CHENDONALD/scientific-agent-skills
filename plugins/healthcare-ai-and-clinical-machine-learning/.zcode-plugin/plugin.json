@@ -1,8 +1,13 @@
 {
   "name": "healthcare-ai-and-clinical-machine-learning",
-  "description": "Healthcare AI & Clinical Machine Learning (官方: Scientific Packages > Healthcare AI & Clinical Machine Learning)",
-  "version": "1.0.0-fork.1",
+  "description": "Healthcare AI & Clinical Machine Learning (\u5b98\u65b9: Scientific Packages > Healthcare AI & Clinical Machine Learning)",
+  "version": "1.0.1",
   "skills": [
     "./skills/pyhealth"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

@@ -1,8 +1,13 @@
 {
   "name": "regulatory-and-standards-evidence-preparation",
-  "description": "Regulatory & Standards Evidence Preparation (官方: Scientific Packages > Regulatory & Standards Evidence Preparation)",
-  "version": "1.0.0-fork.1",
+  "description": "Regulatory & Standards Evidence Preparation (\u5b98\u65b9: Scientific Packages > Regulatory & Standards Evidence Preparation)",
+  "version": "1.0.1",
   "skills": [
     "./skills/iso-13485-certification"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

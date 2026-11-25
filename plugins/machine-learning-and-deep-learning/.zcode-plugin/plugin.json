@@ -1,7 +1,7 @@
 {
   "name": "machine-learning-and-deep-learning",
-  "description": "Machine Learning & Deep Learning (官方: Scientific Packages > Machine Learning & Deep Learning)",
-  "version": "1.2.0-fork.1",
+  "description": "Machine Learning & Deep Learning (\u5b98\u65b9: Scientific Packages > Machine Learning & Deep Learning)",
+  "version": "1.2.1",
   "skills": [
     "./skills/aeon",
     "./skills/cirq",
@@ -21,5 +21,10 @@
     "./skills/torch-geometric",
     "./skills/transformers",
     "./skills/umap-learn"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }

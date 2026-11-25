@@ -1,7 +1,7 @@
 {
   "name": "document-processing-and-conversion",
-  "description": "Document Processing & Conversion (官方: Scientific Packages > Document Processing & Conversion)",
-  "version": "1.2.0-fork.1",
+  "description": "Document Processing & Conversion (\u5b98\u65b9: Scientific Packages > Document Processing & Conversion)",
+  "version": "1.2.1",
   "skills": [
     "./skills/docx",
     "./skills/markitdown",
@@ -10,5 +10,10 @@
     "./skills/pdf",
     "./skills/pptx",
     "./skills/xlsx"
-  ]
+  ],
+  "upstream": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "version": "2.72.0",
+    "mergedAt": "2026-11-25"
+  }
 }
