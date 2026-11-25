@@ -12,6 +12,9 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
 [![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
 
+> **Note (CHENDONALD fork)**: This fork has been optimized for plugin distribution. Large demonstration images (docs/images/, ~229MB) have been removed from git history to keep the repository under the 200MB archive limit required by ZCode and other plugin managers. The original images remain available in the [upstream repository](https://github.com/K-Dense-AI/scientific-agent-skills).
+
+
 ## Star History
 
 <a href="https://www.star-history.com/?repos=K-Dense-AI%2Fscientific-agent-skills&type=date&legend=top-left">
