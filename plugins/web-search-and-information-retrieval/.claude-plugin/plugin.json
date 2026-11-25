@@ -1,7 +1,7 @@
 {
   "name": "web-search-and-information-retrieval",
   "description": "Web Search & Information Retrieval (官方: Scientific Thinking & Analysis > Web Search & Information Retrieval)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "skills": [
     "./skills/exa-search",
     "./skills/parallel-web"
